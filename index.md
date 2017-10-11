@@ -1,5 +1,5 @@
 ---
-title: Bromite home page
+title: Bromite - Chromium + adblocking
 description: Bromite is Chromium + ad blocking; take back your browser
 keywords: bromite, browser, chromium, adblock, android, daily, arm, arm64, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, 8.0, kitkat, lollipop, marshmallow, nougat, oreo, aroma, super, stock, full, mini, micro, nano, pico, tvstock
 timezone: Europe/Berlin
@@ -45,8 +45,13 @@ function radioClick(obj) {
 	}
 }
 
-function doDownload(){
+var latest_release = '63.0.3235.2';
+function doDownload() {
+	var arch = document.getElementsByName('arch')[0].value;
+	var target = document.getElementsByName('target')[0].value;
+	window.location.href = 'https://github.com/bromite/bromite/releases/download/' + latest_release + '/' + arch + '_' + target + '.apk';
 }
+
 </script>
 
 # Take back your browser
@@ -55,17 +60,17 @@ function doDownload(){
 
 Bromite is Chromium plus ad blocking; take back your browser!
 
-# Download
+# Download latest
 
 |Architecture	|Android version|Variant		|
 |:---		|---		|:---			|
-|<label for="arch_arm"><input onclick="radioClick(this)" value="arm" type="radio" name="arch" id="arch_arm" checked />ARM</label>		|<label for="sdk_16"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_16" value="16" checked />Jelly Bean and above</label>	|<label for="target_chrome_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_chrome_public_apk" value="chrome_public_apk" checked />chrome_public_apk</label>	|
-|<label for="arch_arm64"><input onclick="radioClick(this)" value="arm64" type="radio" name="arch" id="arch_arm64"/>ARM64</label>		|<label for="sdk_21"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_21" value="21" />Lollipop and above</label>	|<label for="target_chrome_modern_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_chrome_modern_public_apk" value="chrome_modern_public_apk" />chrome_modern_public_apk</label>|
-|		|<label for="sdk_24"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_24" value="24" />Nougat and above</label>	|<label for="target_monochrome_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_monochrome_public_apk" value="monochrome_public_apk" />monochrome_public_apk</label>|
+|<label for="arch_arm"><input onclick="radioClick(this)" value="arm" type="radio" name="arch" id="arch_arm" checked />ARM</label>		|<label for="sdk_16"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_16" value="16" checked />Jelly Bean and above</label>	|<label for="target_chrome_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_chrome_public_apk" value="ChromePublic" checked />chrome_public_apk</label>	|
+|<label for="arch_arm64"><input onclick="radioClick(this)" value="arm64" type="radio" name="arch" id="arch_arm64"/>ARM64</label>		|<label for="sdk_21"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_21" value="21" />Lollipop and above</label>	|<label for="target_chrome_modern_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_chrome_modern_public_apk" value="ChromeModernPublic" />chrome_modern_public_apk</label>|
+|		|<label for="sdk_24"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_24" value="24" />Nougat and above</label>	|<label for="target_monochrome_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_monochrome_public_apk" value="MonochromePublic" />monochrome_public_apk</label>|
 
 <input type="button" value="Download" onclick="doDownload()" />
 
-[All available downloads](https://github.com/bromite/bromite/releases)
+[All available releases](https://github.com/bromite/bromite/releases)
 
 # Donate
 
