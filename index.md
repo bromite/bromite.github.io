@@ -1,5 +1,5 @@
 ---
-title: Bromite - Chromium + adblocking
+title: Bromite
 description: Bromite is Chromium + ad blocking; take back your browser
 keywords: bromite, browser, chromium, adblock, android, daily, arm, arm64, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, 8.0, kitkat, lollipop, marshmallow, nougat, oreo, aroma, super, stock, full, mini, micro, nano, pico, tvstock
 timezone: Europe/Berlin
