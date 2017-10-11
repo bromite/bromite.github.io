@@ -81,6 +81,7 @@ Support development with a free amount donation:
 <input title="Donate an amount for Bromite development" type="image" src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="donate via PayPal">
 </form>
 
+
 BTC donations address: `3MkC3idL61npQSCxL1gceksmRTkNkiCPcG`
 
 ETH donations address: `0xf47ff39223d828f99fec5ab53bd068c5c0522042`
