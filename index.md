@@ -61,7 +61,7 @@ Bromite is [Chromium](https://www.chromium.org/getting-involved/download-chromiu
 |<label for="arch_arm64"><input onclick="radioClick(this)" value="arm64" type="radio" name="arch" id="arch_arm64"/>ARM64</label>		|<label for="sdk_21"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_21" value="21" />Lollipop and above</label>	|<label for="target_chrome_modern_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_chrome_modern_public_apk" value="chrome_modern_public_apk" />chrome_modern_public_apk</label>|
 |		|<label for="sdk_24"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_24" value="24" />Nougat and above</label>	|<label for="target_monochrome_public_apk"><input onclick="radioClick(this)"  type="radio" name="target" id="target_monochrome_public_apk" value="monochrome_public_apk" />monochrome_public_apk</label>|
 
-<input type="button" onclick="doDownload()" />
+<input type="button" value="Download" onclick="doDownload()" />
 
 # Donate
 
