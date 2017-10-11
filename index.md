@@ -47,8 +47,25 @@ function radioClick(obj) {
 
 var latest_release = '63.0.3235.2';
 function doDownload() {
-	var arch = document.getElementsByName('arch')[0].value;
-	var target = document.getElementsByName('target')[0].value;
+	var arch, target;
+
+	var objs = document.getElementsByName('arch');
+	for (var i = 0; i < objs.length; i++) {
+		if (objs[i].checked) {
+			arch = objs[i].value;
+			break;
+		}
+	}
+	objs = document.getElementsByName('target');
+	for (var i = 0; i < objs.length; i++) {
+		if (objs[i].checked) {
+			target = objs[i].value;
+			break;
+		}
+	}
+	if (arch == '' || target == '')
+		return;
+
 	window.location.href = 'https://github.com/bromite/bromite/releases/download/' + latest_release + '/' + arch + '_' + target + '.apk';
 }
 
