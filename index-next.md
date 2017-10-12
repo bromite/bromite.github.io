@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 var latest_release = '63.0.3235.2';
 function setLatestRelease(obj) {
-	console.log(obj);
+	var refParts = obj[0].ref.split('/');
+	latest_release = refParts[refParts.length-1];
 }
 
 function doDownload() {
@@ -107,9 +108,9 @@ Bromite is Chromium plus ad blocking; take back your browser!
 
 Please donate to support development of Bromite and the costs for the build system.
 
-Support development with a donation of 3 EUR: [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JP3XTQPVRNET2)
+Support development with a donation of 3 EUR: [![paypal](./btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JP3XTQPVRNET2)
 
-Support development with a free amount donation: [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC7Q6A3UAQPY8)
+Support development with a free amount donation: [![paypal](./btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LC7Q6A3UAQPY8)
 
 <a href="bitcoin:3MkC3idL61npQSCxL1gceksmRTkNkiCPcG">BTC donations address</a>: `3MkC3idL61npQSCxL1gceksmRTkNkiCPcG`
 
