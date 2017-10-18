@@ -36,10 +36,6 @@ function fetchJSON(){
         };
 }
 
-document.addEventListener("DOMContentLoaded", function(event) { 
-  fetchJSON();
-});
-
 var latest_release = '{{ site.latest_release }}';
 function setLatestRelease(obj) {
 	var refParts = obj[0].ref.split('/');
