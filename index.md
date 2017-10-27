@@ -19,31 +19,6 @@ function radioClick(obj) {
 	}
 }
 
-function fetchJSON(){
-	var request = new XMLHttpRequest();
-		request.open('GET', 'https://api.github.com/repos/bromite/bromite/git/refs/tags', true);
-		request.send(null);
-
-        request.onreadystatechange = function () {
-		if (request.readyState === 4 && request.status === 200) {
-			try {
-				var obj = JSON.parse(request.responseText);
-				setLatestRelease(obj);
-			} catch(err) {
-	        		console.log(err);
-		        }
-		}
-        };
-}
-
-var latest_release = '{{ site.latest_release }}';
-function setLatestRelease(obj) {
-	var refParts = obj[0].ref.split('/');
-	latest_release = refParts[refParts.length-1];
-	
-	document.getElementById('download_button').value = 'Download v' + latest_release;
-}
-
 function doDownload() {
 	var arch, target;
 
