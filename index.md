@@ -56,7 +56,7 @@ function doDownload() {
 
 # Take back your browser
 
-<img src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
+<img title="Bromite - Take back your browser!" src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
 
 Bromite is Chromium plus ad blocking and privacy; take back your browser!
 
