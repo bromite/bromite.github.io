@@ -58,7 +58,7 @@ function doDownload() {
 
 <img src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
 
-Bromite is Chromium for Android plus ad blocking and privacy; take back your browser!
+Bromite is Chromium plus ad blocking and privacy; take back your browser!
 
 # Download
 
@@ -67,6 +67,8 @@ Bromite is Chromium for Android plus ad blocking and privacy; take back your bro
 |<label for="arch_arm"><input onclick="radioClick(this)" value="arm" type="radio" name="arch" id="arch_arm" checked />ARM</label>		|<label for="sdk_16"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_16" value="16" checked />Jelly Bean and above</label>	|
 |<label for="arch_arm64"><input onclick="radioClick(this)" value="arm64" type="radio" name="arch" id="arch_arm64"/>ARM64</label>		|<label for="sdk_21"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_21" value="21" />Lollipop and above</label>	|
 |<label for="arch_x86"><input onclick="radioClick(this)" value="x86" type="radio" name="arch" id="arch_x86"/>X86</label>		|<label for="sdk_24"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_24" value="24" />Nougat and above</label>	| |
+
+Android v4.0 and above are supported.
 
 <input id="download_button" type="button" value="Download v{{ site.latest_release }}" onclick="doDownload()" style="font-size: 1em" />
 
