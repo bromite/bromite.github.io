@@ -58,9 +58,9 @@ function doDownload() {
 
 <img src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
 
-Bromite is Chromium plus ad blocking and privacy; take back your browser!
+Bromite is Chromium for Android plus ad blocking and privacy; take back your browser!
 
-# Download latest
+# Download
 
 |Architecture	|Android version	|
 |:---		|---		|
