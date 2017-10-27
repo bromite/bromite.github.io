@@ -49,7 +49,7 @@ function doDownload() {
 	if (arch == '' || target == '')
 		return;
 
-	window.location.href = 'https://github.com/bromite/bromite/releases/download/' + latest_release + '/' + arch + '_' + target + '.apk';
+	window.location.href = 'https://github.com/bromite/bromite/releases/download/{{ site.latest_release }}/' + arch + '_' + target + '.apk';
 }
 
 </script>
