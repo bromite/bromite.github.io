@@ -1,7 +1,7 @@
 ---
 title: Bromite
 description: Bromite is Chromium + ad blocking and privacy; take back your browser
-keywords: bromite, browser, chromium, adblock, android, privacy, arm, arm64, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, 8.0, kitkat, lollipop, marshmallow, nougat, oreo, aroma, super, stock, full, mini, micro, nano, pico, tvstock
+keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, 8.0, kitkat, lollipop, marshmallow, nougat, oreo, aroma, super, stock, full, mini, micro, nano, pico, tvstock
 timezone: Europe/Berlin
 ---
 
@@ -59,6 +59,8 @@ function doDownload() {
 <img title="Bromite - Take back your browser!" src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
 
 Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
+
+See the full features list here: [README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
 # Download
 
