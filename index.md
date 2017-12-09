@@ -66,6 +66,8 @@ See the full features list here: [README](https://github.com/bromite/bromite/blo
 
 Android v4.0 and above are supported.
 
+Current stable version: <strong>{{ site.latest_release }}</strong>
+
 |Architecture	|Android version	|
 |:---		|---		|
 |<label for="arch_arm"><input onclick="radioClick(this)" value="arm" type="radio" name="arch" id="arch_arm" checked />ARM</label>		|<label for="sdk_16"><input onclick="radioClick(this)"  type="radio" name="sdk" id="sdk_16" value="16" checked />Jelly Bean and above</label>	|
