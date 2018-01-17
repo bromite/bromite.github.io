@@ -64,7 +64,7 @@ See the full features list here: [README](https://github.com/bromite/bromite/blo
 
 # Download
 
-Android v4.0 and above are supported.
+Android v4.1 and above are supported.
 
 Current stable version: <strong>{{ site.latest_release }}</strong>
 
