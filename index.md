@@ -52,6 +52,14 @@ function doDownload() {
 
 Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
 
+Main features:
+* baked-in adblock filters from EasyList, EasyPrivacy and others
+* remove click-tracking and AMP from Google search results
+* StartPage search engine
+* DuckDuckGo search engine
+* some privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
+* all codecs included (proprietary, open H.264 etc.)
+
 See the full features list here: [README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
 # Download
