@@ -53,7 +53,7 @@ function doDownload() {
 Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
 
 Main features:
-* baked-in adblock filters from EasyList, EasyPrivacy and others
+* baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from Google search results
 * StartPage search engine
 * DuckDuckGo search engine
@@ -61,6 +61,11 @@ Main features:
 * all codecs included (proprietary, open H.264 etc.)
 
 See the full features list here: [README](https://github.com/bromite/bromite/blob/master/README.md#features).
+
+# Other resources
+
+* Wiki: https://github.com/bromite/bromite/wiki
+* Official Thread on XDA Developers forums: https://forum.xda-developers.com/android/apps-games/app-bromite-chromium-plus-adblocking-t3687258
 
 # Download
 
