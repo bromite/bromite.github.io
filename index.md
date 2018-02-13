@@ -64,8 +64,8 @@ See the full features list here: [README](https://github.com/bromite/bromite/blo
 
 # Other resources
 
-* Wiki: https://github.com/bromite/bromite/wiki
-* Official Thread on XDA Developers forums: https://forum.xda-developers.com/android/apps-games/app-bromite-chromium-plus-adblocking-t3687258
+* [Wiki](https://github.com/bromite/bromite/wiki)
+* [Official Thread on XDA Developers forums](https://forum.xda-developers.com/android/apps-games/app-bromite-chromium-plus-adblocking-t3687258)
 
 # Download
 
