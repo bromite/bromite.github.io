@@ -55,10 +55,13 @@ Bromite is Chromium plus ad blocking and privacy enhancements; take back your br
 Main features:
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from Google search results
+* allow youtube/vimeo videos to play in background
 * StartPage search engine
 * DuckDuckGo search engine
-* some privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
+* Google search engines English-only with reduced tracking
+* privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
 * all codecs included (proprietary, open H.264 etc.)
+* built with official optimizations
 
 See the full features list here: [README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
