@@ -87,6 +87,9 @@ Current stable version: <strong>{{ site.latest_release }}</strong>
 
 [All available releases](https://github.com/bromite/bromite/releases)
 
+<img src="downloads.svg" alt="43k total downloads on Github" title="43k total downloads on Github" />
+<img src="xda_labs.svg" alt="5855 downloads on XDA Labs" title="5855 downloads on XDA Labs" />
+
 # Donate
 
 Please donate to support development of Bromite and the costs for the build system.
