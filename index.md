@@ -60,6 +60,7 @@ Main features:
 * DuckDuckGo search engine
 * Google search engines English-only with reduced tracking
 * privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
+* completely removed webRTC
 * all codecs included (proprietary, open H.264 etc.)
 * built with official optimizations
 
