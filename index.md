@@ -6,8 +6,8 @@ timezone: Europe/Berlin
 app_name: Bromite
 apk_prefix: ''
 pkg_name: org.bromite.bromite
-gh_downloads: 43439
-xda_downloads: 5865
+gh_downloads: 43706
+xda_downloads: 5953
 ---
 {% include download_script.html %}
 # Take back your browser
@@ -35,7 +35,7 @@ See the full features list here: [README](https://github.com/bromite/bromite/blo
 ## Other downloads
 
 * [All Bromite releases](https://github.com/bromite/bromite/releases)
-<!-- * [Bromite SystemWebView](/system_web_view) -->
+* [Bromite SystemWebView](/system_web_view)
 * [Bromite on XDA Labs](https://labs.xda-developers.com/store/app/org.bromite.bromite) - only for ARM and SDK21+
 <!-- * [Chromium releases](/chromium) -->
 
