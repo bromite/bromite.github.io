@@ -11,7 +11,7 @@ gh_downloads: '0'
 {% include download_script.html %}
 # Chromium releases
 
-Bromite provides vanilla Chromium releases built with same settings and optimizations of Bromite but without any patch.
+As part of the Bromite project the vanilla Chromium releases (built with same settings and optimizations of Bromite, but no patches) are provided.
 This is mostly useful to detect new features/bugs in Chromium and compare functionality with Bromite, but it is as well a 100% vanilla working Chromium browser (with all the pros/cons).
 
 [Bromite home page](/)
