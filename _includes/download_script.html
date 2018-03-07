@@ -1,0 +1,40 @@
+<script type="text/javascript">
+function radioClick(obj) {
+	if (obj.name == 'arch') {
+		if (obj.value == 'arm64') {
+			document.getElementById('sdk_21').checked = true;
+		}
+	}
+}
+
+function doDownload() {
+	var arch, target;
+
+	var objs = document.getElementsByName('arch');
+	for (var i = 0; i < objs.length; i++) {
+		if (objs[i].checked) {
+			arch = objs[i].value;
+			break;
+		}
+	}
+	objs = document.getElementsByName('sdk');
+	for (var i = 0; i < objs.length; i++) {
+		if (objs[i].checked) {
+			switch (objs[i].value) {
+				case '16':
+					target = 'ChromePublic';
+				break;
+				case '21': case '24':
+					target = 'ChromeModernPublic';
+				break;
+			}
+			break;
+		}
+	}
+	if (arch == '' || target == '')
+		return;
+
+	window.location.href = 'https://github.com/bromite/{{ page.app_name | downcase }}/releases/download/{{ site.latest_release }}/{{ page.apk_prefix }}' + arch + '_' + target + '.apk';
+}
+
+</script>
