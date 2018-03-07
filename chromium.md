@@ -15,8 +15,8 @@ gh_downloads: '0'
 As part of the Bromite project the vanilla Chromium releases (built with same settings and optimizations of Bromite, but no patches) are provided.
 This is mostly useful to detect new features/bugs in Chromium and compare functionality with Bromite, but it is as well a 100% vanilla working Chromium browser (with all the pros/cons).
 
-[Bromite home page](/)
-[Chromium home page](https://www.chromium.org/Home)
+* [Bromite home page](/)
+* [&rarr; Chromium home page](https://www.chromium.org/Home)
 
 {% include toc.html %}
 {% include download.html app_name='Chromium' apk_prefix='chr_' %}

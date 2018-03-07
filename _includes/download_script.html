@@ -1,8 +1,11 @@
 <script type="text/javascript">
-function radioClick(obj) {
-	if (obj.name == 'arch') {
+function radioClick(appTarget, obj) {
+	if (appTarget == 'SystemWebView') {
+		return;
+	}
+	if (obj.name == appTarget.toLowerCase() + '_arch') {
 		if (obj.value == 'arm64') {
-			document.getElementById('sdk_21').checked = true;
+			document.getElementById(appTarget.toLowerCase() + '_sdk_21').checked = true;
 		}
 	}
 }
