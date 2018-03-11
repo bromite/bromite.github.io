@@ -1,0 +1,9 @@
+---
+layout: none
+repo_name: bromite
+app_target: bromite
+dl_type: xda
+ext_label: XDA Labs
+label: XDA Labs
+---
+{% include downloads.svg %}
