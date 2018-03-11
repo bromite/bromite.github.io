@@ -36,6 +36,6 @@ See the full features list here: [&rarr; README](https://github.com/bromite/brom
 * [&rarr; All Bromite releases](https://github.com/bromite/bromite/releases)
 * [Bromite SystemWebView](/system_web_view)
 * [&rarr; Bromite on XDA Labs](https://labs.xda-developers.com/store/app/org.bromite.bromite) - only for ARM and SDK21+
-<!-- * [Chromium releases](/chromium) -->
+* [Chromium releases](/chromium)
 
 {% include donate.html %}
