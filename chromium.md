@@ -17,6 +17,7 @@ This is mostly useful to detect new features/bugs in Chromium and compare functi
 
 * [Bromite home page](/)
 * [&rarr; Chromium home page](https://www.chromium.org/Home)
+* [&rarr; Chromium on XDA Labs](https://labs.xda-developers.com/store/app/org.bromite.chromium) - only for ARM and SDK21+
 
 {% include toc.html %}
 {% include download.html app_name='Chromium' apk_prefix='chr_' %}
