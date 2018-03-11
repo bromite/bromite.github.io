@@ -5,7 +5,6 @@ keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64
 timezone: Europe/Berlin
 logo: /chromium.png
 image: /chromium.png
-gh_downloads: 1
 dl_components: 'chromium systemwebview'
 ---
 # Chromium releases
