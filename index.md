@@ -7,8 +7,6 @@ app_name: Bromite
 apk_prefix: ''
 pkg_name: org.bromite.bromite
 dl_components: 'bromite'
-gh_downloads: 45245
-xda_downloads: 6723
 ---
 # Take back your browser
 
