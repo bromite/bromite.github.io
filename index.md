@@ -6,8 +6,9 @@ timezone: Europe/Berlin
 app_name: Bromite
 apk_prefix: ''
 pkg_name: org.bromite.bromite
-gh_downloads: 44301
-xda_downloads: 6345
+dl_components: 'bromite'
+gh_downloads: 45234
+xda_downloads: 6687
 ---
 # Take back your browser
 
