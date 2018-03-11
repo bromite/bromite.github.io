@@ -1,5 +1,5 @@
-{% assign shortAppName = include.app_name | split:' ' | first %}
-{% assign target = include.app_name | split:' ' | last %}
+{% assign app_name = include.app_name | split:' ' | first %}
+{% assign app_target = include.app_name | split:' ' | last | downcase %}
 # Download {{ include.app_name }}
 
 Android v4.1 and above are supported.
@@ -8,11 +8,11 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 
 |Architecture	|Android version	|
 |:---		|---		|
-|<label for="{{ target | downcase }}_arch_arm"><input onclick="radioClick('{{ target }}', this)" value="arm" type="radio" name="{{ target | downcase }}_arch" id="{{ target | downcase }}_arch_arm" checked />ARM</label>		|<label for="{{ target | downcase }}_sdk_16"><input onclick="radioClick('{{ target }}', this)"  type="radio" name="{{ target | downcase }}_sdk" id="{{ target | downcase }}_sdk_16" value="16" {% if target == 'SystemWebView' %}disabled="disabled"{% endif %} />Jelly Bean and above (SDK16)</label>	|
-|<label for="{{ target | downcase }}_arch_arm64"><input onclick="radioClick('{{ target }}', this)" value="arm64" type="radio" name="{{ target | downcase }}_arch" id="{{ target | downcase }}_arch_arm64"/>ARM64</label>		|<label for="{{ target | downcase }}_sdk_21"><input onclick="radioClick('{{ target }}', this)"  type="radio" name="{{ target | downcase }}_sdk" id="{{ target | downcase }}_sdk_21" value="21" checked />Lollipop and above (SDK21)</label>	|
-|<label for="{{ target | downcase }}_arch_x86"><input onclick="radioClick('{{ target }}', this)" value="x86" type="radio" name="{{ target | downcase }}_arch" id="{{ target | downcase }}_arch_x86"/>X86</label>		|<label for="{{ target | downcase }}_sdk_24"><input onclick="radioClick('{{ target }}', this)"  type="radio" name="{{ target | downcase }}_sdk" id="{{ target | downcase }}_sdk_24" value="24" />Nougat and above (SDK24)</label>	|
+|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_16"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_16" value="16" {% if app_target == 'SystemWebView' %}disabled="disabled"{% endif %} />Jelly Bean and above (SDK16)</label>	|
+|<label for="{{ app_target }}_arch_arm64"><input onclick="radioClick('{{ app_target }}', this)" value="arm64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm64"/>ARM64</label>		|<label for="{{ app_target }}_sdk_21"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_21" value="21" checked />Lollipop and above (SDK21)</label>	|
+|<label for="{{ app_target }}_arch_x86"><input onclick="radioClick('{{ app_target }}', this)" value="x86" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x86"/>X86</label>		|<label for="{{ app_target }}_sdk_24"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_24" value="24" />Nougat and above (SDK24)</label>	|
 
-<input id="download_button" type="button" value="Download {{ include.app_name }} v{{ site.latest_release }}" onclick="doDownload('{{ shortAppName }}', '{{ target }}', '{{ include.apk_prefix }}')" style="font-size: 1em" />
+<input id="download_button" type="button" value="Download {{ include.app_name }} v{{ site.latest_release }}" onclick="doDownload('{{ app_name }}', '{{ app_target }}', '{{ include.apk_prefix }}')" style="font-size: 1em" />
 
-<a title="{{ shortAppName }} Github releases" href="https://github.com/bromite/{{ shortAppName | downcase }}/releases"><img src="{{ include.apk_prefix }}downloads.svg" alt="{{ page.gh_downloads }} downloads on Github" title="{{ page.gh_downloads }} downloads on Github" /></a>
+<a title="{{ app_name }} Github releases" href="https://github.com/bromite/{{ app_name | downcase }}/releases"><img src="{{ include.apk_prefix }}downloads.svg" alt="{{ page.gh_downloads }} downloads on Github" title="{{ page.gh_downloads }} downloads on Github" /></a>
 {% if page.xda_downloads %}<img src="{{ page.apk_prefix}}xda_labs.svg" alt="{{ page.xda_downloads }} downloads on XDA Labs" title="{{ page.xda_downloads }} downloads on XDA Labs" />{% endif %}
