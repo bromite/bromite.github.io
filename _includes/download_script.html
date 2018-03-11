@@ -10,10 +10,14 @@ function selectDefaults(appTargetsStr) {
 	for (var i = 0, len = appTargets.length; i<len; i++) {
 		var appTarget = appTargets[i];
 		if (arch) {
-			document.getElementById(appTarget.toLowerCase() + '_' + arch).checked = true;
+			var input = document.getElementById(appTarget.toLowerCase() + '_' + arch);
+			input.checked = true;
+			input.parentNode.parentNode.style = 'box-shadow: inset 0 0 0 1000px rgba(76,198,30,0.35)';
 		}
 		if (sdk) {
-			document.getElementById(appTarget.toLowerCase() + '_' + sdk).checked = true;
+			var input = document.getElementById(appTarget.toLowerCase() + '_' + sdk);
+			input.checked = true;
+			input.parentNode.parentNode.style = 'box-shadow: inset 0 0 0 1000px rgba(76,198,30,0.35)';
 		}
 	}
 
