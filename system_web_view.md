@@ -5,7 +5,6 @@ keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64
 timezone: Europe/Berlin
 gh_downloads: 44301
 ---
-{% include download_script.html %}
 # SystemWebView
 
 <img title="Bromite - Take back your browser!" src="/android-icon-192x192.png" width="96" alt="Bromite" />

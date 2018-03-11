@@ -9,7 +9,6 @@ pkg_name: org.bromite.bromite
 gh_downloads: 44301
 xda_downloads: 6345
 ---
-{% include download_script.html %}
 # Take back your browser
 
 <img title="Bromite - Take back your browser!" src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
