@@ -32,6 +32,8 @@ function selectDefaultArch() {
 		return false;
         if (navigator.platform.includes("aarch64"))
 		return "arch_arm64";
+        if (navigator.platform.includes("armv8"))
+		return "arch_arm64";
         if (navigator.platform.includes("arm"))
 		return "arch_arm";
         if (navigator.platform.includes("i686"))
