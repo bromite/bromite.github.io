@@ -1,0 +1,9 @@
+---
+layout: none
+repo_name: chromium
+app_target: chromium
+dl_type: github
+ext_label: Github
+label: Downloads
+---
+{% include downloads.svg %}
