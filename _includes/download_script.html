@@ -1,11 +1,66 @@
 <script type="text/javascript">
+
+var defaultSDK = "sdk_21", defaultArch = "arm";
+
+function selectDefaults(appTargetsStr) {
+        var appTargets = appTargetsStr.split(" ");
+	var arch = selectDefaultArch();
+	var sdk = selectDefaultSDK();
+
+	for (var i = 0, len = appTargets.length; i<len; i++) {
+		var appTarget = appTargets[i];
+		if (arch) {
+			document.getElementById(appTarget.toLowerCase() + '_' + arch).checked = true;
+		}
+		if (sdk) {
+			document.getElementById(appTarget.toLowerCase() + '_' + sdk).checked = true;
+		}
+	}
+
+	if (sdk)
+		defaultSDK = sdk;
+	if (arch)
+		defaultArch = arch;
+}
+
+function selectDefaultArch() {
+	if (!navigator.platform)
+		return false;
+        if (navigator.platform.includes("aarch64"))
+		return "arch_arm64";
+        if (navigator.platform.includes("arm"))
+		return "arch_arm";
+        if (navigator.platform.includes("i686"))
+		return "arch_x86";
+        return false;
+}
+
+function selectDefaultSDK() {
+	var av = getAndroidVersion();
+	if (!av)
+		return false;
+	if (av.startsWith("4.1"))
+		return "sdk_16";
+	if (av.startsWith("5."))
+		return "sdk_21";
+	if (av.startsWith("7.") || (parseInt(av) >= 8))
+		return "sdk_24";
+	return false;
+}
+
+function getAndroidVersion() {
+	var ua = navigator.userAgent.toLowerCase();
+	var match = ua.match(/android\s([0-9\.]*)/);
+	return match ? match[1] : false;
+};
+
 function radioClick(appTarget, obj) {
 	if (appTarget == 'SystemWebView') {
 		return;
 	}
 	if (obj.name == appTarget.toLowerCase() + '_arch') {
 		if (obj.value == 'arm64') {
-			document.getElementById(appTarget.toLowerCase() + '_sdk_21').checked = true;
+			document.getElementById(appTarget.toLowerCase() + '_' + defaultSDK).checked = true;
 		}
 	}
 }
