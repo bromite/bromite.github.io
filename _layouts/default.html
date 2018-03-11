@@ -8,10 +8,13 @@
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
 	{% include head.html %}
 {% seo %}
+{% if page.dl_components %}
+{% include download_script.html %}
+{% endif %}
 	<link rel="canonical" href="{{ site.url }}" />
   </head>
 
-  <body>
+  <body{% if page.dl_components %} onload="selectDefaults('{{ page.dl_components }}')"{% endif %}>
     <div id="container">
       <div class="inner">
 
