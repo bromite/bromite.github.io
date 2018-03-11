@@ -7,7 +7,6 @@ logo: /chromium.png
 image: /chromium.png
 gh_downloads: '0'
 ---
-{% include download_script.html %}
 # Chromium releases
 
 <img title="Chromium - provided by Bromite project" src="/chromium.png" width="96" alt="Chromium" />
