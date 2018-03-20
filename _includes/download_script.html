@@ -12,12 +12,20 @@ function selectDefaults(appTargetsStr) {
 		if (arch) {
 			var input = document.getElementById(appTarget + '_' + arch);
 			input.checked = true;
-			input.parentNode.parentNode.style = 'box-shadow: inset 0 0 0 1000px rgba(76,198,30,0.35)';
+			if (appTargetsStr.includes("chromium")) {
+				input.parentNode.parentNode.classList.add("chromium-halo");
+			} else {
+				input.parentNode.parentNode.classList.add("bromite-halo");
+			}
 		}
 		if (sdk) {
 			var input = document.getElementById(appTarget + '_' + sdk);
 			input.checked = true;
-			input.parentNode.parentNode.style = 'box-shadow: inset 0 0 0 1000px rgba(76,198,30,0.35)';
+			if (appTargetsStr.includes("chromium")) {
+				input.parentNode.parentNode.classList.add("chromium-halo");
+			} else {
+				input.parentNode.parentNode.classList.add("bromite-halo");
+			}
 		}
 	}
 
