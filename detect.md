@@ -6,7 +6,7 @@ layout: none
 <title>Detect navigator platform</title>
 <script>
 function setMessage() {
-	document.getElementById("message").innerHTML = 'Navigator platform is: <strong>' + navigator.platform + '</strong>';
+	document.getElementById("message").innerHTML = 'Navigator platform is: <strong>' + navigator.platform + '</strong><br/>User Agent is: <strong>' + navigator.userAgent + '</strong>';
 }
 </script>
 </head>
