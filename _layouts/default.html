@@ -11,10 +11,15 @@
 {% if page.dl_components %}
 {% include download_script.html %}
 {% endif %}
+{% if page.fptest %}
+<script src="fp/detect.js"></script>
+<script src="fp/sha1.js"></script>
+<script src="fp/audio.js"></script>
+{% endif %}
 	<link rel="canonical" href="{{ site.url }}" />
   </head>
 
-  <body{% if page.dl_components %} onload="selectDefaults('{{ page.dl_components }}')"{% endif %}>
+  <body{% if page.dl_components %} onload="selectDefaults('{{ page.dl_components }}')"{% endif %}{% if page.fptest %} onload="ACTION()"{% endif %}>
     <div id="container">
       <div class="inner">
 
