@@ -18,11 +18,10 @@ Main features:
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from Google search results
 * allow youtube/vimeo videos to play in background
-* StartPage search engine
-* DuckDuckGo search engine
+* StartPage, DuckDuckGo and Qwant search engines
 * Google search engines English-only with reduced tracking
 * privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
-* removed webRTC
+* removed webRTC and applied other anti-fingerprinting mitigations
 * all codecs included (proprietary, open H.264 etc.)
 * built with official optimizations
 
