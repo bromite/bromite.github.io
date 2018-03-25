@@ -21,7 +21,7 @@ Main features:
 * StartPage, DuckDuckGo and Qwant search engines
 * Google search engines English-only with reduced tracking
 * privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
-* removed webRTC and applied other anti-fingerprinting mitigations
+* webRTC, canvas, audio and other anti-fingerprinting mitigations
 * all codecs included (proprietary, open H.264 etc.)
 * built with official optimizations
 
