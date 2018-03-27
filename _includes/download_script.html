@@ -90,8 +90,8 @@ function doDownload(appName, appTarget, apkPrefix) {
 		}
 	}
 	objs = document.getElementsByName(appTarget + '_sdk');
-	if (appTarget == 'SystemWebView') {
-		target = appTarget;
+	if (appTarget == 'systemwebview') {
+		target = 'SystemWebView';
 	} else {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
