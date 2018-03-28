@@ -8,7 +8,7 @@ function run_pxi_fp() {
 	try {
      var context;
      if (context = new(window.OfflineAudioContext || window.webkitOfflineAudioContext)(1, 44100, 44100), !context) {
-        set_result('pxi_checksum', 0);
+        set_fingerprint('pxi_checksum', 0);
         return;
      }
 
@@ -41,18 +41,18 @@ function run_pxi_fp() {
 		}
 		var hash = sha1.finalize();
 		pxi_full_buffer_hash = hash.toString(CryptoJS.enc.Hex);
-		set_result('pxi_full_buffer_hash', pxi_full_buffer_hash);
+		set_fingerprint('pxi_full_buffer_hash', pxi_full_buffer_hash);
 		
 		for (var i = 4500; 5e3 > i; i++) {
 		  pxi_output += Math.abs(event.renderedBuffer.getChannelData(0)[i]);
 		}
 
-		set_result('pxi_checksum', pxi_output.toString());
+		set_fingerprint('pxi_checksum', pxi_output.toString());
 		pxi_compressor.disconnect();
 	  }
 	} catch (e) {
 		console.log('run_pxi_fp', e);
-		set_result('pxi_checksum', 0);
+		set_fingerprint('pxi_checksum', 0);
 		return;
 	}
 }
@@ -119,7 +119,7 @@ function run_cc_fp() {
 			sha1.update(cc_output[i].toString());
 		}
 		var hash = sha1.finalize();
-		set_result('cc_output', hash.toString(CryptoJS.enc.Hex));
+		set_fingerprint('cc_output', hash.toString(CryptoJS.enc.Hex));
 	};
 
 	oscillator.start(0);
@@ -168,7 +168,7 @@ function run_hybrid_fp() {
 			sha1.update(hybrid_output[i].toString());
 		}
 		var hash = sha1.finalize();
-		set_result('hybrid_output', hash.toString(CryptoJS.enc.Hex));
+		set_fingerprint('hybrid_output', hash.toString(CryptoJS.enc.Hex));
 	};
 
 	oscillator.start(0);
