@@ -9,6 +9,7 @@ fptest: true
 This page helps identifying if common fingerprinting techniques are effective with your browser; no information is stored on any server at the end of the fingerprinting test and you will be offered to download the results as JSON.
 
 <p id="message">If you see this message, something went wrong</p>
+<p>Fingerprints found: <span id="counter" style="text-weight:bold">0</span>/5</p>
 <progress id="progress" max="100"></progress>
 <a id="downloadButton" href="#" style="visibility: hidden">Download this data as JSON</a>
 

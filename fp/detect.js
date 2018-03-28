@@ -8,6 +8,16 @@ function set_result(id, content) {
 	document.getElementById(id).innerHTML = content;
 }
 
+var fingerprints = 0;
+function set_fingerprint(id, content) {
+	set_result(id, content);
+
+	if (content) fingerprints++;
+
+	// update the counter
+	document.getElementById('counter').innerText = fingerprints.toString();
+}
+
 function set_message(msg) {
 	document.getElementById('message').innerHTML = msg;
 }
@@ -62,7 +72,7 @@ function ACTION() {
 			var sha1 = CryptoJS.algo.SHA1.create();
 			sha1.update(canvasDataURI);
 			var hash = sha1.finalize();
-			set_result('canvasFpHash', hash.toString(CryptoJS.enc.Hex));
+			set_fingerprint('canvasFpHash', hash.toString(CryptoJS.enc.Hex));
 		}
 	}
 	incProgress();
