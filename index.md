@@ -14,18 +14,23 @@ dl_components: 'bromite'
 
 Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
 
-Main features:
+## Goals
+Bromite aims at providing a no-clutter browsing experience without privacy-invasive features and with the addition of a fast ad-blocking engine.
+
+Minimal UI changes are applied to help curbing the idea of "browser as an advertisement platform".
+
+## Main features
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from Google search results
 * allow youtube/vimeo videos to play in background
 * StartPage, DuckDuckGo and Qwant search engines
-* Google search engines English-only with reduced tracking
+* Google search engine English-only with reduced tracking
 * privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
 * all codecs included (proprietary, open H.264 etc.)
 * built with official optimizations
 
-See the full features list here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
+See the full README here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
 {% include toc.html %}
 {% include download.html app_name='Bromite' %}
