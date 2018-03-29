@@ -9,7 +9,7 @@ fptest: true
 This page helps identifying if common fingerprinting techniques are effective with your browser; no information is stored on any server at the end of the fingerprinting test and you will be offered to download the results as JSON.
 
 <p id="message">If you see this message, something went wrong</p>
-<p>Fingerprints found: <span id="counter" style="text-weight:bold">0</span>/5</p>
+<p>Fingerprints found: <span id="counter" style="text-weight:bold">0</span>/8</p>
 <progress id="progress" max="100"></progress>
 <a id="downloadButton" href="#" style="visibility: hidden">Download this data as JSON</a>
 
@@ -20,6 +20,14 @@ Navigator platform is: <span class="info" id="navigatorPlatform"></span>
 User agent is: <span class="info" id="userAgent"></span>
 
 Plugins are: <span class="info" id="plugins"></span>
+
+# ClientRects
+<p>getClientRects fingerprints</p>
+<p>String 1: <span class="fingerprint" id="clientRectsFp1"></span></p>
+<p>String 2: <span class="fingerprint" id="clientRectsFp2"></span></p>
+<p>String 3: <span class="fingerprint" id="clientRectsFp3"></span></p>
+
+<iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" onload="getRects()" scrolling="no">iFrame Disabled</iframe>
 
 # WebGL
 <p>glVersion: <span class="info" id="glVersion"></span></p>
