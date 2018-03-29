@@ -1,6 +1,4 @@
 
-function startAudioTests() {
-
 // Performs fingerprint as found in https://client.a.pxi.pub/PXmssU3ZQ0/main.min.js
 function run_pxi_fp() {
 	var pxi_full_buffer;
@@ -172,31 +170,4 @@ function run_hybrid_fp() {
 	};
 
 	oscillator.start(0);
-}
-
-	// There may be weird interference effects if the
-	// prints are run sequentially with no delay, hence
-	// the interleaving.
-	setTimeout(function() {
-		run_pxi_fp();
-		incProgress();
-		
-		setTimeout(function() {
-			run_nt_vc_fp();
-			incProgress();
-			
-			setTimeout(function() {
-				run_cc_fp();
-				incProgress();
-				
-				setTimeout(function() {
-					run_hybrid_fp();
-					incProgress();
-					
-					set_final_message();
-				}, 100);
-			}, 200);
-		}, 140);
-	}, 0);
-	
 }

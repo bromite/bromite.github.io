@@ -31,7 +31,7 @@ function set_final_message() {
 	dlBtn.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(myData)));
 	dlBtn.setAttribute('download', 'fingerprints.json');
 	dlBtn.style.visibility = 'visible';
-	
+
 	set_message('All readings complete');
 }
 
@@ -41,19 +41,46 @@ function incProgress() {
 
 function ACTION() {
 	// they finish in about 3 seconds
-	startAudioTests();
-	
+
+	// There may be weird interference effects if the
+	// prints are run sequentially with no delay, hence
+	// the interleaving.
+	setTimeout(function() {
+		run_pxi_fp();
+		incProgress();
+
+		setTimeout(function() {
+			run_nt_vc_fp();
+			incProgress();
+
+			setTimeout(function() {
+				run_cc_fp();
+				incProgress();
+
+				setTimeout(function() {
+					run_hybrid_fp();
+					incProgress();
+
+					set_final_message();
+				}, 100);
+			}, 200);
+		}, 140);
+	}, 0);
+
 	set_result('navigatorPlatform', navigator.platform);
 	set_result('userAgent', navigator.userAgent);
 	incProgress();
-	
+
+	//set_fingerprint('clientRectsFp', getClientRectsFp());
+	//incProgress();
+
 	var plugins = [];
 	for (plugin of navigator.plugins) {
 		plugins.push(plugin.name);
 	}
 	set_result('plugins', plugins);
 	incProgress();
-	
+
 	webGLBaseData();
 	incProgress();
 	webGLDebugData();
