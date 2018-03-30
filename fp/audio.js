@@ -6,7 +6,7 @@ function run_pxi_fp() {
 	try {
      var context;
      if (context = new(window.OfflineAudioContext || window.webkitOfflineAudioContext)(1, 44100, 44100), !context) {
-        set_fingerprint('pxi_checksum', 0);
+        set_fingerprint_data('pxi_checksum', '');
         return;
      }
 
@@ -33,24 +33,22 @@ function run_pxi_fp() {
 	  context.startRendering();
 	  context.oncomplete = function(event) {
 		pxi_output = 0;
-		var sha1 = CryptoJS.algo.SHA1.create();
+		var acc = '';
 		for (var i = 0; i < event.renderedBuffer.length; i++) {
-			sha1.update(event.renderedBuffer.getChannelData(0)[i].toString());
+			acc += event.renderedBuffer.getChannelData(0)[i].toString();
 		}
-		var hash = sha1.finalize();
-		pxi_full_buffer_hash = hash.toString(CryptoJS.enc.Hex);
-		set_fingerprint('pxi_full_buffer_hash', pxi_full_buffer_hash);
-		
+		set_fingerprint_data('pxi_full_buffer_hash', acc);
+
 		for (var i = 4500; 5e3 > i; i++) {
 		  pxi_output += Math.abs(event.renderedBuffer.getChannelData(0)[i]);
 		}
 
-		set_fingerprint('pxi_checksum', pxi_output.toString());
+		set_fingerprint_data('pxi_checksum', pxi_output.toString());
 		pxi_compressor.disconnect();
 	  }
 	} catch (e) {
 		console.log('run_pxi_fp', e);
-		set_fingerprint('pxi_checksum', 0);
+		set_fingerprint_data('pxi_checksum', '');
 		return;
 	}
 }
@@ -109,15 +107,14 @@ function run_cc_fp() {
 		analyser.disconnect();
 		scriptProcessor.disconnect();
 		gain.disconnect();
-		
+
 		// pick only first 30 elements
 		cc_output = cc_output.slice(0, 30)
-		var sha1 = CryptoJS.algo.SHA1.create();
+		var acc = '';
 		for (var i = 0; i < cc_output.length; i++) {
-			sha1.update(cc_output[i].toString());
+			acc += cc_output[i].toString();
 		}
-		var hash = sha1.finalize();
-		set_fingerprint('cc_output', hash.toString(CryptoJS.enc.Hex));
+		set_fingerprint_data('cc_output', acc);
 	};
 
 	oscillator.start(0);
@@ -161,12 +158,11 @@ function run_hybrid_fp() {
 
 		// pick only first 30 elements
 		hybrid_output = hybrid_output.slice(0, 30)
-		var sha1 = CryptoJS.algo.SHA1.create();
+		var acc = '';
 		for (var i = 0; i < hybrid_output.length; i++) {
-			sha1.update(hybrid_output[i].toString());
+			acc += hybrid_output[i].toString();
 		}
-		var hash = sha1.finalize();
-		set_fingerprint('hybrid_output', hash.toString(CryptoJS.enc.Hex));
+		set_fingerprint_data('hybrid_output', acc);
 	};
 
 	oscillator.start(0);
