@@ -21,6 +21,11 @@ User agent is: <span class="info" id="userAgent"></span>
 
 Plugins are: <span class="info" id="plugins"></span>
 
+Your combined unique fingerprint and identicon:
+
+<p><span id="cumulativeFp" class="fingerprint"></span></p>
+<img id="identicon" />
+
 # ClientRects
 <p>getClientRects fingerprints</p>
 <p>String 1: <span class="fingerprint" id="clientRectsFp1"></span></p>

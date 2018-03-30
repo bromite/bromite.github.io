@@ -8,24 +8,60 @@ function set_result(id, content) {
 	document.getElementById(id).innerHTML = content;
 }
 
-var fingerprints = 0;
-function set_fingerprint(id, content) {
-	set_result(id, content);
+function set_message(msg) {
+	document.getElementById('message').innerHTML = msg;
+}
 
-	if (content) fingerprints++;
+var fingerprints = 0;
+var fingerprintsData = {};
+
+function set_fingerprint_data(id, data) {
+	if (data.length) {
+	        fingerprints++;
+		fingerprintsData[id] = data;
+
+		var sha1 = CryptoJS.algo.SHA1.create();
+		sha1.update(data);
+
+		var hash = sha1.finalize();
+		var fp = hash.toString(CryptoJS.enc.Hex);
+
+		set_result(id, fp);
+	} else {
+		// create the key alone
+		myData[id] = '';
+	}
 
 	// update the counter
 	document.getElementById('counter').innerText = fingerprints.toString();
-}
-
-function set_message(msg) {
-	document.getElementById('message').innerHTML = msg;
 }
 
 // called by the last audio test
 function set_final_message() {
 	// set generation timestamp
 	myData["generatedOn"] = Date.now();
+
+	var fp = '';
+	if (fingerprints != 0) {
+		// calculate the final fingerprint and identicon
+		var sha1 = CryptoJS.algo.SHA1.create();
+		for(var key in fingerprintsData) {
+			sha1.update(fingerprintsData[key]);
+		}
+
+		var hash = sha1.finalize();
+		fp = hash.toString(CryptoJS.enc.Hex);
+
+		var identiconDataURI = new Identicon(fp, 48).toString();
+		var ident = document.getElementById('identicon');
+		ident.style.border = '1px solid navy';
+		ident.src = "data:image/svg+xml;base64," + identiconDataURI;
+
+		document.getElementById('cumulativeFp').innerText = fp;
+		fingerprintData = null;
+	}
+	myData["cumulativeFp"] = fp;
+
 	var dlBtn = document.getElementById('downloadButton');
 	// make link visible
 	dlBtn.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(myData)));
@@ -40,8 +76,6 @@ function incProgress() {
 }
 
 function ACTION() {
-	// they finish in about 3 seconds
-
 	// There may be weird interference effects if the
 	// prints are run sequentially with no delay, hence
 	// the interleaving.
@@ -71,9 +105,6 @@ function ACTION() {
 	set_result('userAgent', navigator.userAgent);
 	incProgress();
 
-	//set_fingerprint('clientRectsFp', getClientRectsFp());
-	//incProgress();
-
 	var plugins = [];
 	for (plugin of navigator.plugins) {
 		plugins.push(plugin.name);
@@ -96,10 +127,7 @@ function ACTION() {
 			img.src = canvasDataURI;
 			img.style.border = '2px solid navy';
 
-			var sha1 = CryptoJS.algo.SHA1.create();
-			sha1.update(canvasDataURI);
-			var hash = sha1.finalize();
-			set_fingerprint('canvasFpHash', hash.toString(CryptoJS.enc.Hex));
+			set_fingerprint_data('canvasFpHash', canvasDataURI);
 		}
 	}
 	incProgress();
