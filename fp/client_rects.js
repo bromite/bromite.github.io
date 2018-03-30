@@ -27,15 +27,8 @@ function getRects() {
         }
 
     for (var h = 1; h <= 3; h++) {
-        var sha1 = CryptoJS.algo.SHA1.create();
-        sha1.update(e[h-1]);
-        var hash = sha1.finalize();
-
-        set_fingerprint("clientRectsFp" + h, hash.toString(CryptoJS.enc.Hex));
-	incProgress();
+        set_fingerprint_data("clientRectsFp" + h, e[h-1].toString());
+        incProgress();
     }
-
-    //$("#rects-fp-full").html(b(md5(e[0] + e[1] + e[2]))),
-    //$("#rects-table").append(f).removeClass("n")
 }
 
