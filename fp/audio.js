@@ -56,7 +56,7 @@ function run_pxi_fp() {
 
 // Performs fingerprint as found in some versions of http://metrics.nt.vc/metrics.js
 function a(a, b, c) {
-    for (var d in b) "dopplerFactor" === d || "speedOfSound" === d || "currentTime" ===
+    for (var d in b) "dopplerFactor" === d || "state" === d || "speedOfSound" === d || "currentTime" ===
         d || "number" !== typeof b[d] && "string" !== typeof b[d] || (a[(c ? c : "") + d] = b[d]);
     return a
 }
