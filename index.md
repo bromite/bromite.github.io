@@ -3,7 +3,6 @@ title: Bromite
 description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
 keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64, 8.1, 8.0, oreo, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, kitkat, lollipop, marshmallow, nougat, aroma, super, stock, full, mini, micro, nano, pico, tvstock, background video playback, fingerprinting
 timezone: Europe/Berlin
-app_name: Bromite
 apk_prefix: ''
 pkg_name: org.bromite.bromite
 dl_components: 'bromite'
@@ -21,14 +20,14 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 
 ## Main features
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
-* remove click-tracking and AMP from Google search results
-* allow youtube/vimeo videos to play in background
-* StartPage, DuckDuckGo and Qwant search engines
-* Google search engine English-only with reduced tracking
-* privacy enhancement patches from Inox patchset, ungoogled-chromium and Iridium projects
+* remove click-tracking and AMP from search results
+* DNS-over-HTTPS support via Google/CloudFlare servers
+* allow playing videos in background
+* [StartPage](https://startpage.com/), [DuckDuckGo](https://duckduckgo.com/) and [Qwant](https://www.qwant.com/) search engines
+* privacy enhancement patches from [Inox patchset](https://github.com/gcarq/inox-patchset), [Brave](https://brave.com/), [ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) and [Iridium](https://github.com/iridium-browser) projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
 * all codecs included (proprietary, open H.264 etc.)
-* built with official optimizations
+* built with official speed optimizations
 
 See the full README here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
