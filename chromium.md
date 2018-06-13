@@ -1,7 +1,7 @@
 ---
 title: Chromium releases
 description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
-keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64, 8.1, 8.0, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, kitkat, lollipop, marshmallow, nougat, oreo, aroma, super, stock, full, mini, micro, nano, pico, tvstock, background video
+keywords: chromium, bromite, browser, adblock, android, privacy, amp, arm, arm64, 8.1, 8.0, oreo, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, kitkat, lollipop, marshmallow, nougat, aroma, super, stock, full, mini, micro, nano, pico, tvstock, background video playback, fingerprinting
 timezone: Europe/Berlin
 logo: /chromium.png
 image: /chromium.png
@@ -11,8 +11,8 @@ dl_components: 'chromium systemwebview'
 
 <img title="Chromium - provided by Bromite project" src="/chromium.png" width="96" alt="Chromium" />
 
-As part of the Bromite project the vanilla Chromium releases (built with same settings and optimizations of Bromite, but no patches) are provided.
-This is mostly useful to detect new features/bugs in Chromium and compare functionality with Bromite, but it is as well a 100% vanilla working Chromium browser (with all the pros/cons).
+Chromium releases (built with same settings and optimizations of Bromite, but no patches) are provided as part of the Bromite project.
+They are mostly useful to detect new features/bugs in Chromium and compare functionality with Bromite, but they provide as well a 100% vanilla working Chromium browser (with all the pros/cons).
 
 * [Bromite home page](/)
 * [&rarr; Chromium home page](https://www.chromium.org/Home)
