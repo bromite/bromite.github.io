@@ -29,7 +29,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 * all codecs included (proprietary, open H.264 etc.)
 * built with official speed optimizations
 
-See the full README here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
+See the complete features list here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
 {% include toc.html %}
 {% include download.html app_name='Bromite' %}
