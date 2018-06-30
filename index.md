@@ -24,7 +24,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 * DNS-over-HTTPS support via Google/CloudFlare servers
 * allow playing videos in background
 * [&rarr; StartPage](https://startpage.com/), [&rarr; DuckDuckGo](https://duckduckgo.com/) and [&rarr; Qwant](https://www.qwant.com/) search engines
-* privacy enhancement patches from [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/), [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) and [Iridium](https://github.com/iridium-browser) projects
+* privacy enhancement patches from [&rarr; Iridium](https://iridiumbrowser.de/), [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/) and [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
 * all codecs included (proprietary, open H.264 etc.)
 * built with official speed optimizations
