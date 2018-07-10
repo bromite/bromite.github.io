@@ -55,10 +55,8 @@ function selectDefaultSDK() {
 		return false;
 	if (av.startsWith("4.1"))
 		return "sdk_16";
-	if (av.startsWith("5."))
+	if (av.startsWith("5.") || (parseInt(av) >= 8))
 		return "sdk_21";
-	if (av.startsWith("7.") || (parseInt(av) >= 8))
-		return "sdk_24";
 	return false;
 }
 
@@ -99,7 +97,7 @@ function doDownload(appName, appTarget, apkPrefix) {
 					case '16':
 						target = 'ChromePublic';
 					break;
-					case '21': case '24':
+					case '21':
 						target = 'ChromeModernPublic';
 					break;
 				}
