@@ -85,8 +85,15 @@ function run_cc_fp() {
 	var cc_output = [];
 
 	var audioCtx = new(window.AudioContext || window.webkitAudioContext),
-		oscillator = audioCtx.createOscillator(),
-		analyser = audioCtx.createAnalyser(),
+		analyser = audioCtx.createAnalyser();
+
+	if (typeof analyser.getFloatFrequencyData !== 'function') {
+		analyser.disconnect();
+		set_fingerprint_data('cc_output', '');
+		return;
+	}
+
+	var	oscillator = audioCtx.createOscillator(),
 		gain = audioCtx.createGain(),
 		scriptProcessor = audioCtx.createScriptProcessor(4096, 1, 1);
 
@@ -124,8 +131,15 @@ function run_cc_fp() {
 function run_hybrid_fp() {
 	var hybrid_output = [];
 	var audioCtx = new(window.AudioContext || window.webkitAudioContext),
-		oscillator = audioCtx.createOscillator(),
-		analyser = audioCtx.createAnalyser(),
+		analyser = audioCtx.createAnalyser();
+
+	if (typeof analyser.getFloatFrequencyData !== 'function') {
+		analyser.disconnect();
+		set_fingerprint_data('hybrid_output', '');
+		return;
+	}
+
+	var	oscillator = audioCtx.createOscillator(),
 		gain = audioCtx.createGain(),
 		scriptProcessor = audioCtx.createScriptProcessor(4096, 1, 1);
 
