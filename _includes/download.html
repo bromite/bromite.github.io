@@ -18,3 +18,5 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 
 <a title="{{ app_name }} Github releases" href="https://github.com/bromite/{{ repo_name }}/releases"><img src="{{ repo_name }}_{{ app_target }}_gh_downloads.svg" alt="{{ site.data[repo_name][app_target].github }} downloads on Github" title="{{ site.data[repo_name][app_target].github }} downloads on Github" /></a>
 {% if site.data[repo_name][app_target].xda %}<img src="{{ repo_name }}_{{ app_target }}_xda_downloads.svg" alt="{{ site.data[repo_name][app_target].xda }} downloads on XDA Labs" title="{{ site.data[repo_name][app_target].xda }} downloads on XDA Labs" />{% endif %}
+
+{% if app_name == "Bromite" or app_name == "Chromium" %}You can also install and receive updates [via F-Droid Client](/fdroid).{% endif %}
