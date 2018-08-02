@@ -22,10 +22,11 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support
-* allow playing videos in background
 * [&rarr; StartPage](https://startpage.com/), [&rarr; DuckDuckGo](https://duckduckgo.com/) and [&rarr; Qwant](https://www.qwant.com/) search engines
 * privacy enhancement patches from [&rarr; Iridium](https://iridiumbrowser.de/), [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/) and [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
+* export bookmarks
+* allow playing videos in background
 * all codecs included (proprietary, open H.264 etc.)
 * built with official speed optimizations
 
