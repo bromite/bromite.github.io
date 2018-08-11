@@ -26,7 +26,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 * chrome flag to hide NTP tiles and to disable custom intents
 * privacy enhancement patches from [&rarr; Iridium](https://iridiumbrowser.de/), [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/) and [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
-* export bookmarks
+* import/export bookmarks
 * allow playing videos in background
 * all codecs included (proprietary, open H.264 etc.)
 * built with official speed optimizations
