@@ -23,7 +23,8 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support
 * [&rarr; StartPage](https://startpage.com/), [&rarr; DuckDuckGo](https://duckduckgo.com/) and [&rarr; Qwant](https://www.qwant.com/) search engines
-* chrome flag to hide NTP tiles and to disable custom intents
+* chrome flags to hide NTP tiles, disable custom intents and clear session on exit
+* always-incognito mode
 * privacy enhancement patches from [&rarr; Iridium](https://iridiumbrowser.de/), [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/) and [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) projects
 * webRTC, canvas, audio and other anti-fingerprinting mitigations
 * import/export bookmarks
