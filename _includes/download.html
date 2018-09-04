@@ -18,4 +18,4 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 
 <a title="{{ app_name }} Github releases" href="https://github.com/bromite/{{ repo_name }}/releases"><img src="{{ repo_name }}_{{ app_target }}_gh_downloads.svg" alt="{{ site.data[repo_name][app_target].github }} downloads on Github" title="{{ site.data[repo_name][app_target].github }} downloads on Github" /></a>
 
-{% if app_name == "Bromite" or app_name == "Chromium" %}You can also install and receive updates [via F-Droid Client](/fdroid).{% endif %}
+{% if app_name == "Bromite" or app_name == "Chromium" %}{% if app_target != "systemwebview" %}You can also install and receive updates{% else %}Also available for installation and updates{% endif %} [via F-Droid Client](/fdroid).{% endif %}
