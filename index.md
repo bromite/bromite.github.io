@@ -18,7 +18,10 @@ Bromite aims at providing a no-clutter browsing experience without privacy-invas
 
 Minimal UI changes are applied to help curbing the idea of "browser as an advertisement platform".
 
-## Main features
+{% include toc.html %}
+{% include news.html %}
+
+# Main features
 * baked-in adblock engine with filters from EasyList, EasyPrivacy and others
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support
@@ -34,7 +37,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 
 See the complete features list here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
 
-{% include toc.html %}
+{% include donate.html %}
 {% include download.html app_name='Bromite' %}
 
 ## Other downloads
@@ -42,5 +45,3 @@ See the complete features list here: [&rarr; README](https://github.com/bromite/
 * [&rarr; All Bromite releases](https://github.com/bromite/bromite/releases)
 * [Bromite SystemWebView](/system_web_view)
 * [Chromium releases](/chromium)
-
-{% include donate.html %}
