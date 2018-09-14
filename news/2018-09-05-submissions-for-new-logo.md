@@ -24,6 +24,10 @@ You can probably also play with the idea of chemicals, since [real-world bromite
 
 This information is mentioned mostly as a curiosity, since it is the most directly related to the name, but the design can completely ignore it; it is not considered an advantage in any way for the logo design (and it would be quite difficult to use regardless).
 
+Android icons should be adaptive: https://developer.android.com/guide/practices/ui_guidelines/icon_design_adaptive
+
+And - as a bonus - you could consider Material Design guidelines since it is the suggested style for Android anways: https://material.io/design/iconography/
+
 ## Is there a monetary compensation for this work?
 
 Yes, a donation of 100$ which can be transferred via PayPal.
