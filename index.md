@@ -13,10 +13,13 @@ dl_components: 'bromite'
 
 Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
 
-## Goals
-Bromite aims at providing a no-clutter browsing experience without privacy-invasive features and with the addition of a fast ad-blocking engine.
+The main goal is to provide a no-clutter browsing experience without privacy-invasive features and with the addition of a fast ad-blocking engine.
 
 Minimal UI changes are applied to help curbing the idea of "browser as an advertisement platform".
+
+All patches are published under [GNU/GPL v3](https://github.com/bromite/bromite/blob/master/LICENSE) to enable other open source projects' usage.
+
+Bromite is available for Android v4.1 and above.
 
 {% include toc.html %}
 {% include news.html %}
