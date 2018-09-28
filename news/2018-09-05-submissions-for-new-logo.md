@@ -6,6 +6,8 @@ Bromite needs a new logo. The current logo is a derivation of [Chromium logo](ht
 
 This post will be updated with further information and precisations.
 
+**Update 28 September 22:30:** submission window is now closed
+
 ## How to submit your logo design
 
 You can prepare a low resolution PNG (even watermarked) and submit it second these venues:
@@ -45,7 +47,7 @@ The license of the submitted work should be [Attribution-NonCommercial-ShareAlik
 
 ## Is there a deadline for submissions?
 
-No more submissions will be accepted after 5 October 23:59 UTC. If no logo has been picked yet, this might be extended, but it is unlikely.
+No more submissions will be accepted after ~~5 October 23:59 UTC~~ 28 September 23:59 UTC. If no logo has been picked yet, this might be extended, but it is unlikely.
 
 ---
 [&rarr; Discuss on Hacker News](https://news.ycombinator.com/item?id=17920365)
