@@ -8,7 +8,7 @@ image: /bromite.png
 ---
 # F-Droid repository
 
-<img title="Bromite - Take back your browser!" src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
+<img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" />
 
 * [Bromite home page](/)
 
