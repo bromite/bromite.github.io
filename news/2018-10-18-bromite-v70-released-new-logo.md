@@ -12,7 +12,7 @@ Please report any bugs via the [issue tracker on GitHub](https://github.com/brom
 
 A new logo has been selected for Bromite:
 
-<img title="Bromite - Take back your browser!" src="https://www.bromite.org/android-icon-192x192.png" width="96" alt="Bromite" />
+<img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" />
 
 Thanks to Vadim Pleshkov ([http://vadimpleshkov.me/](http://vadimpleshkov.me/)) for the design.
 

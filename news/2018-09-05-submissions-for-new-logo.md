@@ -18,7 +18,7 @@ Submissions will not be shared nor posted anywhere before or after the submissio
 
 ## Inspiration material for this logo
 
-Logo should obviously not look like Chromium logo, nor some other browser logo. A minimal design and the [current color](https://www.bromite.org/android-icon-192x192.png) would be great to have, but are not mandatory inclusion/exclusion factors for your submission.
+Logo should obviously not look like Chromium logo, nor some other browser logo. A minimal design and the current color would be great to have, but are not mandatory inclusion/exclusion factors for your submission.
 
 For example the logo - in its most basic design - could be a greenish world with a test tube overlayed.
 
