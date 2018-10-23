@@ -11,7 +11,7 @@ fptest: true
 This page helps identifying if common fingerprinting techniques are effective with your browser; no information is stored on any server at the end of the fingerprinting test and you will be offered to download the results as JSON.
 
 <p id="message">If you see this message, something went wrong</p>
-<p>Fingerprints found: <span id="counter" style="text-weight:bold">0</span>/8</p>
+<p>Fingerprints found: <span id="counter" style="text-weight:bold">0</span>/9</p>
 <progress id="progress" max="100"></progress>
 <a id="downloadButton" href="#" style="visibility: hidden">Download this data as JSON</a>
 
@@ -27,6 +27,37 @@ Your combined unique fingerprint and identicon:
 
 <p><span id="cumulativeFp" class="fingerprint"></span></p>
 <img id="identicon" />
+
+# ClientRects
+<p>getClientRects fingerprints</p>
+<p>String 1: <span class="fingerprint" id="clientRectsFp1"></span></p>
+<p>String 2: <span class="fingerprint" id="clientRectsFp2"></span></p>
+<p>String 3: <span class="fingerprint" id="clientRectsFp3"></span></p>
+
+<iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" onload="getRects()" scrolling="no">iFrame Disabled</iframe>
+
+# WebGL
+<p>glVersion: <span class="info" id="glVersion"></span></p>
+<p>glRenderer: <span class="info" id="glRenderer"></span></p>
+<p>glVendor: <span class="info" id="glVendor"></span></p>
+
+<p>glDebugRenderer: <span class="info" id="glDebugRenderer"></span></p>
+<p>glDebugVendor: <span class="info" id="glDebugVendor"></span></p>
+
+# Canvas
+<p>canvas fingerprint: <span class="fingerprint" id="canvasFpHash"></span></p>
+<img alt="generated canvas image" id="canvasImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+
+# WebGL readPixels
+<p>webGL readPixels fingerprint: <span class="fingerprint" id="webGLFpHash"></span></p>
+<div id="webGLImage"></div>
+
+# Audio
+<p>cc_output[:30] hash: <span class="fingerprint" id="cc_output"></span></p>
+<p>hybrid_output[:30] hash: <span class="fingerprint" id="hybrid_output"></span></p>
+<p>pxi_full_buffer_hash: <span class="fingerprint" id="pxi_full_buffer_hash"></span></p>
+<p>pxi_checksum: <span class="fingerprint" id="pxi_checksum"></span></p>
+<p>nt_vc_output: <pre id="nt_vc_output"></pre></p>
 
 # Sensors
 
@@ -52,30 +83,3 @@ Your combined unique fingerprint and identicon:
 ## Magnetometer
 <p>Magnetometer reading: <pre class="fixed_pre" id="moMagneto">N.A.</pre></p>
 
-# ClientRects
-<p>getClientRects fingerprints</p>
-<p>String 1: <span class="fingerprint" id="clientRectsFp1"></span></p>
-<p>String 2: <span class="fingerprint" id="clientRectsFp2"></span></p>
-<p>String 3: <span class="fingerprint" id="clientRectsFp3"></span></p>
-
-<iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" onload="getRects()" scrolling="no">iFrame Disabled</iframe>
-
-# WebGL
-<p>glVersion: <span class="info" id="glVersion"></span></p>
-<p>glRenderer: <span class="info" id="glRenderer"></span></p>
-<p>glVendor: <span class="info" id="glVendor"></span></p>
-
-<p>glDebugRenderer: <span class="info" id="glDebugRenderer"></span></p>
-<p>glDebugVendor: <span class="info" id="glDebugVendor"></span></p>
-
-# Canvas
-<p>canvas fingerprint: <span class="fingerprint" id="canvasFpHash"></span></p>
-<p>canvasDataURI: <textarea readonly="readonly" id="canvasDataURI"></textarea></p>
-<img alt="generated canvas image" id="canvasImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
-
-# Audio
-<p>cc_output[:30] hash: <span class="fingerprint" id="cc_output"></span></p>
-<p>hybrid_output[:30] hash: <span class="fingerprint" id="hybrid_output"></span></p>
-<p>pxi_full_buffer_hash: <span class="fingerprint" id="pxi_full_buffer_hash"></span></p>
-<p>pxi_checksum: <span class="fingerprint" id="pxi_checksum"></span></p>
-<p>nt_vc_output: <pre id="nt_vc_output"></pre></p>
