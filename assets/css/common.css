@@ -41,3 +41,8 @@ svg {
 .info {
 	font-weight: bold;
 }
+
+.fixed_pre {
+   width: 90%;
+   height: 2em;
+}
