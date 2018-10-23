@@ -133,6 +133,9 @@ function ACTION() {
 	incProgress();
 
 	set_message('Audio test results should appear below in about 1 second.');
+
+	// start reading sensor data
+	detectSensors();
 }
 
 function webGLBaseData() {

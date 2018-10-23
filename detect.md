@@ -28,6 +28,30 @@ Your combined unique fingerprint and identicon:
 <p><span id="cumulativeFp" class="fingerprint"></span></p>
 <img id="identicon" />
 
+# Sensors
+
+**NOTE:** this information is not used for the fingerprinting test
+
+## DeviceMotion
+<p>Linear acceleration (excl. gravity): <pre class="fixed_pre" id="moDeviceMotionAccel">N.A.</pre></p>
+<p>Acceleration (including gravity): <pre class="fixed_pre" id="moDeviceMotionAccelGrav">N.A.</pre></p>
+<p>Rotation rate: <pre class="fixed_pre" id="moDeviceMotionRotation">N.A.</pre></p>
+<p>Interval (ms): <pre class="fixed_pre" id="moDeviceMotionInterval">N.A.</pre></p>
+
+## GravitySensor
+<p>Acceleration (including gravity): <pre class="fixed_pre" id="moAccelGrav">N.A.</pre></p>
+
+## LinearAccelerationSensor
+<p>Linear acceleration (excluding gravity): <pre class="fixed_pre" id="moAccel">N.A.</pre></p>
+<p>Interval (ms): <pre class="fixed_pre" id="moGenericSensorInterval">N.A.</pre></p>
+
+## Gyroscope
+
+<p>Rotation rate: <pre class="fixed_pre" id="moGenericSensorRotation">N.A.</pre></p>
+
+## Magnetometer
+<p>Magnetometer reading: <pre class="fixed_pre" id="moMagneto">N.A.</pre></p>
+
 # ClientRects
 <p>getClientRects fingerprints</p>
 <p>String 1: <span class="fingerprint" id="clientRectsFp1"></span></p>
