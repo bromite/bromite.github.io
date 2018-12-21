@@ -1,8 +1,6 @@
 ---
 title: New F-Droid repository URL
 ---
-* [Bromite home page](/)
-
 # New F-Droid repository URL
 
 Starting from release 71.0.3578.104 the official F-Droid repository URL has changed to:

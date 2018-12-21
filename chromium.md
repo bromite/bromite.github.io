@@ -14,7 +14,6 @@ dl_components: 'chromium systemwebview'
 Chromium releases (built with same settings and optimizations of Bromite, but no patches) are provided as part of the Bromite project.
 They are mostly useful to detect new features/bugs in Chromium and compare functionality with Bromite, but they provide as well a 100% vanilla working Chromium browser (with all the pros/cons).
 
-* [Bromite home page](/)
 * [&rarr; Chromium home page](https://www.chromium.org/Home)
 
 {% include toc.html %}

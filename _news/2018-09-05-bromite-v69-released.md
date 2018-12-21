@@ -1,8 +1,6 @@
 ---
 title: Bromite v69 released
 ---
-* [Bromite home page](/)
-
 # Bromite v69 released
 
 Notable in this version:

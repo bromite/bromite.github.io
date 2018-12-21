@@ -1,8 +1,6 @@
 ---
 title: Submissions for new logo
 ---
-* [Bromite home page](/)
-
 # Submissions for new logo
 
 Bromite needs a new logo. The current logo is a derivation of [Chromium logo](https://commons.wikimedia.org/wiki/File:Chromium_11_Logo.svg) and it makes sense since Bromite is 99% Chromium, but for the sake of the project it is better to have an original one.

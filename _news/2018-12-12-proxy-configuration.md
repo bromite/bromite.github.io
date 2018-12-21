@@ -1,8 +1,6 @@
 ---
 title: Proxy configuration
 ---
-* [Bromite home page](/)
-
 # Proxy configuration
 
 Since latest 71.0.3578.88 release users can now fully configure the browser proxies.

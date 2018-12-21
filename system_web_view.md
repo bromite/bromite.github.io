@@ -13,8 +13,6 @@ The SystemWebView package contains the core browser/rendering engine of Bromite 
 
 See also: [&rarr; SystemWebView installation wiki page](https://github.com/bromite/bromite/wiki/Installing-SystemWebView)
 
-[Bromite home page](/)
-
 {% include toc.html %}
 {% include download.html app_name='Bromite SystemWebView' %}
 
