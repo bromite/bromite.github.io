@@ -14,6 +14,6 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 <br/>
 <input type="button" title="Latest stable {{ include.app_name }}" value="Download {{ include.app_name }} v{{ site.latest_release }}" onclick="doDownload('{{ app_name }}', '{{ app_target }}', '{{ include.apk_prefix }}')" class="download_button {{ repo_name }}-halo" />
 
-<a title="{{ app_name }} Github releases" href="https://github.com/bromite/{{ repo_name }}/releases"><img src="{{ repo_name }}_{{ app_target }}_gh_downloads.svg" alt="{{ site.data[repo_name][app_target].github }} downloads on Github" title="{{ site.data[repo_name][app_target].github }} downloads on Github" /></a>
+<a title="{{ app_name }} Github releases" href="https://github.com/bromite/{{ repo_name }}/releases"><img src="{{ repo_name }}_{{ app_target }}_gh_downloads.svg" alt="{{ site.data[repo_name][app_target].github }} downloads on Github" title="{{ site.data[repo_name][app_target].github }} downloads on Github" /></a> <a target="_blank" title="{{ app_name }} Github releases Atom Feed" href="https://github.com/bromite/{{ repo_name }}/releases.atom"><img height="20" src="/assets/img/feed.svg" alt="{{ app_name }} Github releases Atom Feed"></a>
 
 {% if app_name == "Bromite" or app_name == "Chromium" %}{% if app_target != "systemwebview" %}You can also install and receive updates{% else %}Also available for installation and updates{% endif %} [via F-Droid Client](/fdroid).{% endif %}
