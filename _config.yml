@@ -1,7 +1,24 @@
 title: Bromite - take back your browser
 theme: jekyll-theme-tactile
 url: https://www.bromite.org
+repository: bromite/bromite.github.io
 author: csagan5
+collections:
+  news:
+    output: true
+    permalink: /:collection/:year-:month-:day-:title
+defaults:
+  - scope:
+      type: "news"
+    values:
+      layout: default
+plugins:
+  - jekyll-feed
+feed:
+  path: /tmp/unused.xml
+  collections:
+    news:
+      path: "/feed.xml"
 logo: /android-icon-192x192.png
 image: /android-icon-192x192.png
 latest_release: 71.0.3578.104

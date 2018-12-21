@@ -1,3 +1,6 @@
+---
+title: Submissions for new logo
+---
 * [Bromite home page](/)
 
 # Submissions for new logo

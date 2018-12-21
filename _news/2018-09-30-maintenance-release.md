@@ -1,3 +1,6 @@
+---
+title: Maintenance release for DoH issue
+---
 * [Bromite home page](/)
 
 # Maintenance release for DoH issue
