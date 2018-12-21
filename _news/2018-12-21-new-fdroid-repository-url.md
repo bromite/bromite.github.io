@@ -1,3 +1,6 @@
+---
+title: New F-Droid repository URL
+---
 * [Bromite home page](/)
 
 # New F-Droid repository URL

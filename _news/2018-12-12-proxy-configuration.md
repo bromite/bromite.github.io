@@ -1,3 +1,6 @@
+---
+title: Proxy configuration
+---
 * [Bromite home page](/)
 
 # Proxy configuration

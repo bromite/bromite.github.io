@@ -1,3 +1,6 @@
+---
+title: Bromite v70 released
+---
 * [Bromite home page](/)
 
 # Bromite v70 released
