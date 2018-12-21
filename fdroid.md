@@ -10,8 +10,6 @@ image: /bromite.png
 
 <img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" />
 
-* [Bromite home page](/)
-
 You can download Bromite (or [vanilla Chromium](./chromium)) through the [&rarr; F-Droid client](https://f-droid.org/) and receive all stable and beta updates through it.
 
 You need to add the official Bromite F-Droid repository as a third-party repository either by scanning the QR code or adding the URL manually (copy the link from below image):

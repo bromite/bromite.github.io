@@ -1,8 +1,6 @@
 ---
 title: Maintenance release for DoH issue
 ---
-* [Bromite home page](/)
-
 # Maintenance release for DoH issue
 
 This new Bromite 69.0.3497.113 release disables support of DNS-over-HTTPS (DoH) until the upstream bug has been fixed (see [Github issue](https://github.com/bromite/bromite/issues/139)); this is expected to happen with the first version 70 release.

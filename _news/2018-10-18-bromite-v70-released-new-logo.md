@@ -1,8 +1,6 @@
 ---
 title: Bromite v70 released
 ---
-* [Bromite home page](/)
-
 # Bromite v70 released
 
 As part of this release DNS-over-HTTPS (DoH) support is back.
