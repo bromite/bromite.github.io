@@ -5,9 +5,6 @@ keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64
 timezone: Europe/Berlin
 fptest: true
 ---
-
-* [Bromite home page](/)
-
 This page helps identifying if common fingerprinting techniques are effective with your browser; no information is stored on any server at the end of the fingerprinting test and you will be offered to download the results as JSON.
 
 <p id="message">If you see this message, something went wrong</p>
