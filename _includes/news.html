@@ -1,3 +1,5 @@
 # News
 {% assign sorted_news = (site.news | sort: 'date') | reverse %}
 <ul>{% for news in sorted_news %}<li><a title="{{ news.date }} - {{ news.title }}" href="{{ news.url }}">{{ news.title }}</a></li>{% endfor %}</ul>
+
+<a target="_blank" title="Bromite News Atom Feed" href="/feed.xml"><img height="20" src="/assets/img/feed.svg" alt="Bromite News Atom Feed"></a>
