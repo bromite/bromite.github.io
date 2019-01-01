@@ -4,6 +4,6 @@ repo_name: bromite
 app_target: bromite
 dl_type: github
 ext_label: Github
-label: Downloads
+label: GH Downloads
 ---
 {% include downloads.svg %}

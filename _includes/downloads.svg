@@ -1,6 +1,7 @@
 {% assign count = site.data[page.repo_name][page.app_target][page.dl_type] %}
-{% assign label_len = 590 %}
-{% assign text_len = count | downcase | size | times: 62 %}
+{% assign label_len = 745 %}
+{% assign green_x_offset = 80 %}
+{% assign text_len = count | downcase | size | times: 61 %}
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="20">
     <title>{{ count }} downloads on {{ page.ext_label }}</title>
     <linearGradient id="b" x2="0" y2="100%">
@@ -11,14 +12,14 @@
         <rect width="128" height="20" rx="3" fill="#fff" />
     </clipPath>
     <g clip-path="url(#a)">
-        <path fill="#555" d="M0 0h69v20H0z" />
-        <path fill="#4c1" d="M69 0h59v20H69z" />
+        <path fill="#555" d="M0 0h{{ green_x_offset }}v20H0z" />
+        <path fill="#4c1" d="M{{ green_x_offset }} 0h59v20H{{ green_x_offset }}z" />
         <path fill="url(#b)" d="M0 0h128v20H0z" />
     </g>
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110">
-        <text x="355" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="{{ label_len }}">{{ page.label }}</text>
-        <text x="355" y="140" transform="scale(.1)" textLength="{{ label_len }}">{{ page.label }}</text>
-        <text x="975" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="{{ text_len }}">{{ count }}</text>
-        <text x="975" y="140" transform="scale(.1)" textLength="{{ text_len }}">{{ count }}</text>
+        <text x="380" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="{{ label_len }}">{{ page.label }}</text>
+        <text x="380" y="140" transform="scale(.1)" textLength="{{ label_len }}">{{ page.label }}</text>
+        <text x="{{ green_x_offset | plus: 960 }}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" textLength="{{ text_len }}">{{ count }}</text>
+        <text x="{{ green_x_offset | plus: 960 }}" y="140" transform="scale(.1)" textLength="{{ text_len }}">{{ count }}</text>
     </g>
 </svg>
