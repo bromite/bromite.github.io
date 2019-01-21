@@ -38,6 +38,7 @@ Bromite is available for Android v4.1 and above.
 * import/export bookmarks
 * allow playing videos in background
 * all codecs included (proprietary, open H.264 etc.)
+* [AV1 codec support](https://github.com/bromite/bromite/wiki/AV1-support)
 * built with official speed optimizations
 
 See the complete features list here: [&rarr; README](https://github.com/bromite/bromite/blob/master/README.md#features).
