@@ -25,7 +25,7 @@ Bromite is available for Android v4.1 and above.
 {% include news.html %}
 
 # Main features
-* baked-in adblock engine with filters from EasyList, EasyPrivacy and others
+* baked-in adblock engine with filters from EasyList, EasyPrivacy, uBlock origin and others
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support
 * [Proxy configuration](https://github.com/bromite/bromite/wiki/ProxyConfiguration) with PAC and custom proxy lists support
