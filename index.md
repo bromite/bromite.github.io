@@ -34,6 +34,7 @@ Bromite is available for Android v4.1 and above.
 * always-incognito mode
 * removed privacy-unfriendly features
 * privacy enhancement patches from [&rarr; Iridium](https://iridiumbrowser.de/), [&rarr; Inox patchset](https://github.com/gcarq/inox-patchset), [&rarr; Brave](https://brave.com/) and [&rarr; ungoogled-chromium](https://github.com/Eloston/ungoogled-chromium) projects
+* security enhancement patches from [AndroidHardening](https://github.com/AndroidHardening) project
 * canvas, audio and other anti-fingerprinting mitigations
 * import/export bookmarks
 * allow playing videos in background
