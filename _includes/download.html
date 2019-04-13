@@ -7,7 +7,7 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 
 |Architecture	|Android version	|
 |:---		|:---		|
-|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_16"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_16" value="16" {% if app_target == 'systemwebview' %}disabled="disabled"{% endif %} />Jelly Bean and above (SDK16)</label>	|
+|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_17"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_17" value="17" {% if app_target == 'systemwebview' %}disabled="disabled"{% endif %} />Jelly Bean 4.2 and above (SDK17)</label>	|
 |<label for="{{ app_target }}_arch_arm64"><input onclick="radioClick('{{ app_target }}', this)" value="arm64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm64"/>ARM64</label>		|<label for="{{ app_target }}_sdk_21"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_21" value="21" checked />Lollipop and above (SDK21)</label>	|
 |<label for="{{ app_target }}_arch_x86"><input onclick="radioClick('{{ app_target }}', this)" value="x86" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x86"/>X86</label>		| |
 
