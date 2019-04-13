@@ -50,14 +50,50 @@ function selectDefaultArch() {
 }
 
 function selectDefaultSDK() {
-	var av = getAndroidVersion();
-	if (!av)
+	var sdk = androidVersionToSDK(getAndroidVersion());
+	if (!sdk)
 		return false;
-	if (av.startsWith("4.1"))
-		return "sdk_16";
-	if (av.startsWith("5.") || (parseInt(av) >= 8))
-		return "sdk_21";
-	return false;
+	if (sdk < 21)
+		return 'sdk_17';
+	return 'sdk_21';
+}
+
+function androidVersionToSDK(av) {
+        if (!av)
+          return false;
+        var parts = av.split('.');
+        if (parts.length < 2)
+          return false;
+
+        var major = parseInt(parts[0]), minor = parseInt(parts[1]);
+        if (major < 4)
+            return false;
+        var patch = 0;
+        if (parts.length > 2)
+          patch = parseInt(parts[2]);
+        
+        switch (major) {
+          case 4:
+            if (minor < 2) {
+              // SDK16 and below are not supported since v74
+              return false;
+            }
+            return 15+minor;
+          case 5:
+            return 21+minor;
+          case 6:
+            return 23;
+          case 7:
+            return 24+minor;
+          case 8:
+            return 26+minor;
+          case 9:
+          default:
+            return 28;
+        }
+
+        // will never get here
+        return false;
 }
 
 function getAndroidVersion() {
