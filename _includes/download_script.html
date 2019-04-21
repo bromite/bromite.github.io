@@ -7,7 +7,7 @@ function selectDefaults(appTargetsStr) {
 	var arch = selectDefaultArch();
 	var sdk = selectDefaultSDK();
 
-	for (var i = 0, len = appTargets.length; i<len; i++) {
+	for (var i = 0, len = appTargets.length; i < len; i++) {
 		var appTarget = appTargets[i];
 		if (arch) {
 			var input = document.getElementById(appTarget + '_' + arch);
@@ -114,7 +114,7 @@ function radioClick(appTarget, obj) {
 }
 
 function doDownload(appName, appTarget, apkPrefix) {
-	var arch, target;
+	var arch = '', target = '';
 
 	var objs = document.getElementsByName(appTarget + '_arch');
 	for (var i = 0; i < objs.length; i++) {
@@ -130,7 +130,7 @@ function doDownload(appName, appTarget, apkPrefix) {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
 				switch (objs[i].value) {
-					case '16':
+					case '17':
 						target = 'ChromePublic';
 					break;
 					case '21':
@@ -141,8 +141,10 @@ function doDownload(appName, appTarget, apkPrefix) {
 			}
 		}
 	}
-	if (arch == '' || target == '')
+	if (arch == '' || target == '') {
+		console.log("cannot download", appName, appTarget, apkPrefix);
 		return;
+	}
 
 	window.location.href = 'https://github.com/bromite/' + appName.toLowerCase() + '/releases/download/{{ site.latest_release }}/' + apkPrefix + arch + '_' + target + '.apk';
 }
