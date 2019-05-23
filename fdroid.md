@@ -16,9 +16,14 @@ You need to add the official Bromite F-Droid repository as a third-party reposit
 
 <center><a href="https://fdroid.bromite.org/fdroid/repo?fingerprint=E1EE5CD076D7B0DC84CB2B45FB78B86DF2EB39A3B6C56BA3DC292A5E0C3B9504"><img title="Bromite - Take back your browser! - F-Droid repository QR code" src="/assets/img/fdroid_repo_qrcode.png" width="128" alt="Bromite F-Droid Repository QR code" /></a></center>
 
-Always verify that the repository key fingerprint is:
+Always verify that the repository details are exactly:
 ```
-E1EE5CD076D7B0DC84CB2B45FB78B86DF2EB39A3B6C56BA3DC292A5E0C3B9504
+Address: https://fdroid.bromite.org/fdroid/repo
+Fingerprint of the signing key: E1EE5CD076D7B0DC84CB2B45FB78B86DF2EB39A3B6C56BA3DC292A5E0C3B9504
 ```
+
+Example:
+
+<center><img alt="F-Droid client repository example" title="F-Droid client repository example" src="/assets/img/fdroid_repo_example.png" /></center>
 
 {% include donate.html %}
