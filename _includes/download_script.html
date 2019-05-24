@@ -54,7 +54,7 @@ function selectDefaultSDK() {
 	if (!sdk)
 		return false;
 	if (sdk < 21)
-		return 'sdk_17';
+		return 'sdk_19';
 	return 'sdk_21';
 }
 
@@ -74,8 +74,9 @@ function androidVersionToSDK(av) {
         
         switch (major) {
           case 4:
-            if (minor < 2) {
+            if (minor < 4) {
               // SDK16 and below are not supported since v74
+              // SDK17 and SDK18 are not supported since v75.0.3770.53+
               return false;
             }
             return 15+minor;
@@ -130,11 +131,14 @@ function doDownload(appName, appTarget, apkPrefix) {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
 				switch (objs[i].value) {
-					case '17':
+					case '19':
 						target = 'ChromePublic';
 					break;
 					case '21':
 						target = 'ChromeModernPublic';
+					break;
+					default:
+						console.error("unknown SDK:", objs[i].value);
 					break;
 				}
 				break;
@@ -142,7 +146,7 @@ function doDownload(appName, appTarget, apkPrefix) {
 		}
 	}
 	if (arch == '' || target == '') {
-		console.log("cannot download", appName, appTarget, apkPrefix);
+		console.error("cannot download app ", appName, "with target", appTarget, "and prefix", apkPrefix);
 		return;
 	}
 
