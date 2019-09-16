@@ -1,7 +1,7 @@
 ---
 title: Bromite
 description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
-keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64, 8.1, 8.0, oreo, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, kitkat, lollipop, marshmallow, nougat, aroma, super, stock, full, mini, micro, nano, pico, tvstock, background video playback, fingerprinting
+keywords: bromite, browser, chromium, adblock, android, privacy, amp, arm, arm64, pie, 9.0, 8.1, 8.0, oreo, 4.4, 5.0, 5.1, 6.0, 7.0, 7.1, kitkat, lollipop, marshmallow, nougat, aroma, super, stock, full, mini, micro, nano, pico, tvstock, background video playback, fingerprinting
 timezone: Europe/Berlin
 apk_prefix: ''
 pkg_name: org.bromite.bromite
@@ -25,7 +25,7 @@ Bromite is available for Android v4.4 and above.
 {% include news.html %}
 
 # Main features
-* baked-in adblock engine with filters from EasyList, EasyPrivacy, uBlock origin and others
+* native adblock engine with filters from EasyList, EasyPrivacy, uBlock origin and others
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support
 * [Proxy configuration](https://github.com/bromite/bromite/wiki/ProxyConfiguration) with PAC and custom proxy lists support
