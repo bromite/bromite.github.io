@@ -1,5 +1,7 @@
 # Screnshots
 
+Note: these screenshots might not be updated to represent the user interface of the latest version of Bromite.
+
 <div style="width:image width px; font-size:90%; text-align:center"><img style="border: 2px solid navy" title="New Tab Page" alt="New Tab Page" src="/assets/screenshots/ntp_home.png" />New tab page</div>
 <div style="width:image width px; font-size:90%; text-align:center"><img style="border: 2px solid navy" title="Bromite Home Page" alt="Bromite Home Page" src="/assets/screenshots/bromite_home.png" />Bromite Home page</div>
 <div style="width:image width px; font-size:90%; text-align:center"><img style="border: 2px solid navy" title="Menu items" alt="Menu items" src="/assets/screenshots/menu_items.png" />Menu items</div>
