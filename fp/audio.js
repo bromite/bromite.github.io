@@ -32,6 +32,7 @@ function run_pxi_fp() {
 	  pxi_oscillator.start(0);
 	  context.startRendering();
 	  context.oncomplete = function(event) {
+		try {
 		pxi_output = 0;
 		var acc = '';
 		for (var i = 0; i < event.renderedBuffer.length; i++) {
@@ -44,6 +45,9 @@ function run_pxi_fp() {
 		}
 
 		set_fingerprint_data('pxi_checksum', pxi_output.toString());
+		} catch (e) {
+			console.log('run_pxi_fp oncomplete', e);
+		}
 		pxi_compressor.disconnect();
 	  }
 	} catch (e) {

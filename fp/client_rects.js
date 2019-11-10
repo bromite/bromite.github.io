@@ -1,6 +1,9 @@
 // Details: http://jcarlosnorte.com/security/2016/03/06/advanced-tor-browser-fingerprinting.html
 // https://browserleaks.com/js/rects.js
+
 function getRects() {
+    if (hasClientRectsFp()) return;
+
     function ucFirst(a) {
         return a.charAt(0).toUpperCase() + a.substr(1, a.length - 1)
     }
@@ -28,7 +31,6 @@ function getRects() {
 
     for (var h = 1; h <= 3; h++) {
         set_fingerprint_data("clientRectsFp" + h, e[h-1].toString());
-        incProgress();
+        incProgress('getRects');
     }
 }
-
