@@ -1,5 +1,9 @@
 var myData = {};
 
+function hasClientRectsFp() {
+  return !!myData['clientRectsFp'];
+}
+
 function set_result(id, content) {
 	myData[id] = content;
 	if (id == 'nt_vc_output') {
@@ -71,54 +75,62 @@ function set_final_message() {
 	set_message('All readings complete');
 }
 
-function incProgress() {
-	document.getElementById('progress').value += 100/9;
+var totalTests = 12 + 3;
+
+function incProgress(testName) {
+	console.log(testName, 'completed');
+	document.getElementById('progress').value += 100/totalTests;
 }
 
 function ACTION() {
+	document.getElementById('startButton').disabled = true;
+	set_message('Audio test results should appear below in about 1 second.');
+	// first run the audio context fingerprinting
+	// a gesture is required since v70
+	run_nt_vc_fp();
+	incProgress('run_nt_vc_fp');
+
 	// There may be weird interference effects if the
 	// prints are run sequentially with no delay, hence
 	// the interleaving.
 	setTimeout(function() {
 		run_pxi_fp();
-		incProgress();
+		incProgress('run_pxi_fp');
 
 		setTimeout(function() {
-			run_nt_vc_fp();
-			incProgress();
-
-			setTimeout(function() {
 				run_cc_fp();
-				incProgress();
+				incProgress('run_cc_fp');
 
 				setTimeout(function() {
 					run_hybrid_fp();
-					incProgress();
+					incProgress('run_hybrid_fp');
 
 					set_final_message();
 				}, 100);
 			}, 200);
-		}, 140);
-	}, 0);
+	}, 250);
 
 	set_result('navigatorPlatform', navigator.platform);
 	set_result('userAgent', navigator.userAgent);
-	incProgress();
+	incProgress('navigator/ua');
 
 	var plugins = [];
 	for (plugin of navigator.plugins) {
 		plugins.push(plugin.name);
 	}
 	set_result('plugins', plugins);
-	incProgress();
+	incProgress('plugins');
+
+	// don't use onload to avoid calling it multiple times
+	document.getElementById('rects-iframe').contentWindow.getRects();
 
 	webGLBaseData();
-	incProgress();
+	incProgress('webGL');
 	webGLDebugData();
-	incProgress();
+	incProgress('webGLDebug');
 
 	var canvasDataURI = getCanvasDataURI();
-	incProgress();
+	incProgress('canvas_data_uri');
 	if (canvasDataURI) {
 		if (canvasDataURI != "data:,") {
 			var img = document.getElementById('canvasImg');
@@ -132,7 +144,7 @@ function ACTION() {
 	} else {
 		set_fingerprint_data('canvasFpHash', '');
 	}
-	incProgress();
+	incProgress('canvas_hash');
 
 	var webGLImageData = createWebGLImageAndReturnData();
 	if (webGLImageData == null) {
@@ -140,9 +152,7 @@ function ACTION() {
 	} else {
 		set_fingerprint_data('webGLFpHash', JSON.stringify(webGLImageData));
         }
-        incProgress();
-
-	set_message('Audio test results should appear below in about 1 second.');
+        incProgress('webGL_hash');
 
 	// start reading sensor data
 	detectSensors();
