@@ -33,6 +33,10 @@ You can verify your current active DNS resolver with:
 
 {% include donate.html %}
 
+# Features
+
+The `User-Agent`, `Accept-Language` and brotli compression are not advertised via HTTP headers to avoid user information leak.
+
 # Limitations
 
 * DNS-over-HTTPS does not work when using a custom [proxy configuration](./ProxyConfiguration)
