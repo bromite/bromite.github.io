@@ -46,3 +46,10 @@ svg {
    width: 90%;
    height: 2em;
 }
+
+/* slightly improve for mobile */
+@media only screen and (max-width: 767px) {
+  ul li {
+      font-size: 110%;
+  }
+}
