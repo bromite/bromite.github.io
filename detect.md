@@ -18,6 +18,8 @@ This page helps identifying if common fingerprinting techniques are effective wi
 
 Navigator platform is: <span class="info" id="navigatorPlatform"></span>
 
+Timezone is: [<span class="info" id="timezone1"></span>&‌para;<span class="info" id="timezone2"></span>]
+
 User agent is: <span class="info" id="userAgent"></span>
 
 Plugins are: <span class="info" id="plugins"></span>
