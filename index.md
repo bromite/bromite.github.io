@@ -26,8 +26,9 @@ Bromite is available for Android v4.4 and above.
 
 # Main features
 * native adblock engine with filters from EasyList, EasyPrivacy, uBlock origin and others
+* customizable filters via user-provided URL
 * remove click-tracking and AMP from search results
-* DNS-over-HTTPS support
+* DNS-over-HTTPS support, you can use any DoH endpoint
 * [Proxy configuration](https://github.com/bromite/bromite/wiki/ProxyConfiguration) with PAC and custom proxy lists support
 * [&rarr; StartPage](https://startpage.com/), [&rarr; DuckDuckGo](https://duckduckgo.com/) and [&rarr; Qwant](https://www.qwant.com/) search engines
 * chrome flags to disable custom intents and clear session on exit
