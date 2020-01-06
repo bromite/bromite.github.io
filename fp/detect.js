@@ -110,6 +110,9 @@ function ACTION() {
 			}, 200);
 	}, 250);
 
+	set_result('timezone1', window.Intl.DateTimeFormat().resolvedOptions().timeZone);
+	set_result('timezone2', (new Date()).toLocaleString('en-us',{timeZoneName:'long'}));
+
 	set_result('navigatorPlatform', navigator.platform);
 	set_result('userAgent', navigator.userAgent);
 	incProgress('navigator/ua');
