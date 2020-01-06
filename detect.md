@@ -35,7 +35,7 @@ Your combined unique fingerprint and identicon:
 <p>String 2: <span class="fingerprint" id="clientRectsFp2"></span></p>
 <p>String 3: <span class="fingerprint" id="clientRectsFp3"></span></p>
 
-<iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" onload="getRects()" scrolling="no">iFrame Disabled</iframe>
+<iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" scrolling="no">iFrame Disabled</iframe>
 
 # WebGL
 <p>glVersion: <span class="info" id="glVersion"></span></p>

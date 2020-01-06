@@ -125,7 +125,8 @@ function ACTION() {
 	incProgress('plugins');
 
 	// don't use onload to avoid calling it multiple times
-	document.getElementById('rects-iframe').contentWindow.getRects();
+	getIframeRects();
+	//document.getElementById('rects-iframe').contentWindow.getRects();
 
 	webGLBaseData();
 	incProgress('webGL');
