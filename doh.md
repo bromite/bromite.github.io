@@ -1,6 +1,6 @@
 ---
 title: Bromite DNS-over-HTTPS
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Information about the DNS-over-HTTPS (DoH) feature of Bromite
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png

@@ -1,6 +1,6 @@
 ---
 title: Bromite fingerprinting mitigations test
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser.
+description: Some anti-fingerprinting mitigations tests for Bromite
 timezone: Europe/Berlin
 fptest: true
 ---

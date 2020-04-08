@@ -1,6 +1,6 @@
 ---
 title: Bromite - Donation complete
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Donation complete
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /assets/img/heart.png

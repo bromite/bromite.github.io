@@ -1,6 +1,6 @@
 ---
 title: SystemWebView releases
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: SystemWebView releases
 timezone: Europe/Berlin
 dl_components: 'systemwebview'
 ---
