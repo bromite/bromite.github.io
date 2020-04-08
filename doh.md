@@ -1,7 +1,6 @@
 ---
 title: Bromite DNS-over-HTTPS
 description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
-keywords: chromium, bromite, browser, doh, dns-over-https, apk, adblock, android, privacy
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png
