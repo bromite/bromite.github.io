@@ -1,7 +1,6 @@
 ---
 title: Bromite Custom Ad Block filters
 description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
-keywords: chromium, bromite, browser, apk, adblock, filters, android, privacy
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png
