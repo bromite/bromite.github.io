@@ -1,6 +1,6 @@
 ---
 title: Bromite
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Bromite is a Chromium fork with ad blocking and enhanced privacy; take back your browser
 timezone: Europe/Berlin
 apk_prefix: ''
 pkg_name: org.bromite.bromite
@@ -10,7 +10,7 @@ dl_components: 'bromite'
 
 <img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" />
 
-Bromite is Chromium plus ad blocking and privacy enhancements; take back your browser!
+Bromite is a Chromium fork with ad blocking and privacy enhancements; take back your browser!
 
 The main goal is to provide a no-clutter browsing experience without privacy-invasive features and with the addition of a fast ad-blocking engine.
 

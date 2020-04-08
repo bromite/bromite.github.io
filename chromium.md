@@ -1,6 +1,6 @@
 ---
 title: Chromium releases
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Vanilla Chromium builds
 timezone: Europe/Berlin
 logo: /chromium.png
 image: /chromium.png

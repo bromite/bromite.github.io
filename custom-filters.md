@@ -1,6 +1,6 @@
 ---
 title: Bromite Custom Ad Block filters
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Support for custom subresource filters in Bromite
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png
