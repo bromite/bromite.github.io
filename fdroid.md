@@ -1,6 +1,6 @@
 ---
 title: Bromite F-Droid repository
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Official Bromite F-Droid repository
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png

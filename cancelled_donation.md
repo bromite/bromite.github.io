@@ -1,6 +1,6 @@
 ---
 title: Bromite - Cancelled donation
-description: Bromite is Chromium plus ad blocking and enhanced privacy; take back your browser
+description: Cancelled donation
 timezone: Europe/Berlin
 logo: /bromite.png
 image: /bromite.png
