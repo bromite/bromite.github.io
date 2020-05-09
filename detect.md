@@ -36,6 +36,8 @@ Your combined unique fingerprint and identicon:
 
 <iframe style="width: 100%; height: 230px; border: 2px solid navy" id="rects-iframe" sandbox="allow-same-origin" src="/fp/rects_iframe.html" scrolling="no">iFrame Disabled</iframe>
 
+<iframe id="sub_rtc" sandbox="allow-same-origin"></iframe>
+
 # WebGL
 <p>glVersion: <span class="info" id="glVersion"></span></p>
 <p>glRenderer: <span class="info" id="glRenderer"></span></p>
@@ -43,6 +45,10 @@ Your combined unique fingerprint and identicon:
 
 <p>glDebugRenderer: <span class="info" id="glDebugRenderer"></span></p>
 <p>glDebugVendor: <span class="info" id="glDebugVendor"></span></p>
+
+# WebRTC
+
+<div id="webrtc_data"></div>
 
 # Canvas
 <p>canvas fingerprint: <span class="fingerprint" id="canvasFpHash"></span></p>
