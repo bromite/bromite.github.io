@@ -133,6 +133,9 @@ function ACTION() {
 	webGLDebugData();
 	incProgress('webGLDebug');
 
+	webRTCData();
+	incProgress('webRTC');
+
 	var canvasDataURI = getCanvasDataURI();
 	incProgress('canvas_data_uri');
 	if (canvasDataURI) {
