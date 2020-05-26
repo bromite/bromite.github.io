@@ -29,7 +29,6 @@ Bromite is available for Android v4.4 and above.
 * remove click-tracking and AMP from search results
 * DNS-over-HTTPS support, you can use any DoH endpoint
 * [Proxy configuration](https://github.com/bromite/bromite/wiki/ProxyConfiguration) with PAC and custom proxy lists support
-* [&rarr; DuckDuckGo](https://duckduckgo.com/) and [&rarr; Qwant](https://www.qwant.com/) search engines
 * chrome flags to disable custom intents and clear session on exit
 * always-incognito mode
 * removed privacy-unfriendly features
