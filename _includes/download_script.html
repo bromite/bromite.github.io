@@ -53,8 +53,6 @@ function selectDefaultSDK() {
 	var sdk = androidVersionToSDK(getAndroidVersion());
 	if (!sdk)
 		return false;
-	if (sdk < 21)
-		return 'sdk_19';
 	return 'sdk_21';
 }
 
@@ -131,9 +129,6 @@ function doDownload(appName, appTarget, apkPrefix) {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
 				switch (objs[i].value) {
-					case '19':
-						target = 'ChromePublic';
-					break;
 					case '21':
 						target = 'ChromeModernPublic';
 					break;

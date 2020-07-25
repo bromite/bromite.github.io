@@ -18,7 +18,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 
 All patches are published under [GNU/GPL v3](https://github.com/bromite/bromite/blob/master/LICENSE) to enable other open source projects' usage.
 
-Bromite is available for Android v4.4 and above.
+Bromite is only available for Android Lollipop (v5.0, API level 21) and above.
 
 {% include toc.html %}
 {% include news.html %}
