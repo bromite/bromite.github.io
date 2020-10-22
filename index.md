@@ -51,3 +51,9 @@ See the complete features list here: [&rarr; README](https://github.com/bromite/
 * [&rarr; All Bromite releases](https://github.com/bromite/bromite/releases)
 * [Bromite SystemWebView](/system_web_view)
 * [Chromium releases](/chromium)
+
+## Sponsors
+
+Special thanks to [Gandi.net](https://www.gandi.net/) for supporting the project with the build server resources.
+
+<a href="https://www.gandi.net/"><img src="assets/img/gandi_logo.svg" alt="Gandi.net" title="Gandi.net" /></a>
