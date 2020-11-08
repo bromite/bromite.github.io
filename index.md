@@ -8,9 +8,9 @@ dl_components: 'bromite'
 ---
 # Take back your browser
 
-<div style="width:image width px; font-size:90%; text-align:center"><img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" /></div>
-
 Bromite is a Chromium fork with ad blocking and privacy enhancements; take back your browser!
+
+<div style="width:image width px; font-size:90%; text-align:center"><img title="Bromite - Take back your browser!" src="/bromite.png" width="96" alt="Bromite" /></div>
 
 The main goal is to provide a no-clutter browsing experience without privacy-invasive features and with the addition of a fast ad-blocking engine.
 
