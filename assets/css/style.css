@@ -270,7 +270,8 @@ code,pre {
 code {
     padding: 0 3px;
     background-color: #f2f2f2;
-    border: solid 1px #ddd
+    border: solid 1px #ddd;
+    overflow-wrap: break-word;
 }
 
 pre {
