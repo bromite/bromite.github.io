@@ -256,7 +256,11 @@ a.button span {
     background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat
 }
 
-#view-on-github {
+#discuss-on-github span {
+    background: transparent url(../img/discuss.png) 12px 50% no-repeat
+}
+
+#view-on-github, #discuss-on-github {
     margin-right: 0
 }
 
