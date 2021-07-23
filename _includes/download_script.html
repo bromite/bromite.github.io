@@ -4,8 +4,8 @@ var defaultSDK = "sdk_21", defaultArch = "arm";
 
 function selectDefaults(appTargetsStr) {
         var appTargets = appTargetsStr.split(" ");
-	var arch = selectDefaultArch();
 	var sdk = selectDefaultSDK();
+	var arch = selectDefaultArch(sdk);
 
 	for (var i = 0, len = appTargets.length; i < len; i++) {
 		var appTarget = appTargets[i];
@@ -35,8 +35,8 @@ function selectDefaults(appTargetsStr) {
 		defaultArch = arch;
 }
 
-function selectDefaultArch() {
-	if (!navigator.platform)
+function selectDefaultArch(sdk) {
+	if (!navigator.platform || !sdk)
 		return false;
         if (navigator.platform.includes("aarch64"))
 		return "arch_arm64";
@@ -46,6 +46,8 @@ function selectDefaultArch() {
 		return "arch_arm";
         if (navigator.platform.includes("i686"))
 		return "arch_x86";
+        if (navigator.platform.includes("x86_64"))
+		return "arch_x64";
         return false;
 }
 

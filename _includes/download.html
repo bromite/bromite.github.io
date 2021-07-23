@@ -10,6 +10,7 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 |<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_21"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_21" value="21" {% if app_target == 'systemwebview' %}disabled="disabled"{% endif %} checked="checked" />Lollipop 5.0 and above (SDK21)</label>	|
 |<label for="{{ app_target }}_arch_arm64"><input onclick="radioClick('{{ app_target }}', this)" value="arm64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm64"/>ARM64</label>		| |
 |<label for="{{ app_target }}_arch_x86"><input onclick="radioClick('{{ app_target }}', this)" value="x86" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x86"/>X86</label>		| |
+|<label for="{{ app_target }}_arch_x64"><input onclick="radioClick('{{ app_target }}', this)" value="x64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x64"/>X64</label>		| |
 
 <br/>
 <input type="button" title="Latest stable {{ include.app_name }}" value="Download {{ include.app_name }} v{{ site.latest_release }}" onclick="doDownload('{{ app_name }}', '{{ app_target }}', '{{ include.apk_prefix }}')" class="download_button {{ repo_name }}-halo" />
