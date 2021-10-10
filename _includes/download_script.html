@@ -62,8 +62,8 @@ function androidVersionToSDK(av) {
         if (!av)
           return false;
         var parts = av.split('.');
-        if (parts.length < 2)
-          return false;
+        if (parts.length == 1)
+          parts.push('0');
 
         var major = parseInt(parts[0]), minor = parseInt(parts[1]);
         if (major < 4)
