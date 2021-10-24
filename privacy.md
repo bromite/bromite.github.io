@@ -15,7 +15,7 @@ There is no requirement for anyone who wishes to use Bromite to provide the proj
 Some aspects of interacting with the Bromite Project will involve the collection of personal information, namely:
 * browsing the Bromite Official Website, which is hosted on GitHub Pages
 * the automatic updates of subresource filters used for the AdBlocking functionality, enabled by default, which downloads a file hosted on GitHub Pages
-* the automatic check and update of Bromite itself, disabled by default, which downloads a file hosted on GitHub Project Releases
+* the automatic check and update of Bromite itself, enabled by default, which checks for headers on a a file hosted on GitHub Project Releases and allows to download it
 * using the Bromite Official F-Droid repository
 
 The following subsections describe the information collected.
