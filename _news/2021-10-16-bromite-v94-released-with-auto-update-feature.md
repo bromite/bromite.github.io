@@ -15,5 +15,7 @@ It is now possible to automatically update Bromite when a more recent version is
 
 This update mechanism is a valid alternative to using [F-Droid](https://www.bromite.org/fdroid) or manually downloading updates.
 
+Auto updates are enabled by default since version `94.0.4606.109`.
+
 ---
 [&rarr; Discuss on Hacker News](https://news.ycombinator.com/item?id=28894681)
