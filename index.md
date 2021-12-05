@@ -18,7 +18,7 @@ Minimal UI changes are applied to help curbing the idea of "browser as an advert
 
 All patches are published under [GNU/GPL v3](https://github.com/bromite/bromite/blob/master/LICENSE) to enable other open source projects' usage.
 
-Bromite is only available for Android Lollipop (v5.0, API level 21) and above.
+Bromite is only available for Android Marshmallow (v6.0, API level 23) and above.
 
 <div style="width:image width px; font-size:90%; text-align:center"><img style="border: 2px solid navy" title="New Tab Page" alt="New Tab Page" src="/assets/screenshots/ntp_home.png" />New tab page</div>
 

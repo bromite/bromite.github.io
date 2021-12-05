@@ -1,10 +1,10 @@
 <script type="text/javascript">
 
-var defaultSDK = "sdk_21", defaultArch = "arm";
+var defaultSDK = "sdk_23", defaultArch = "arm";
 
 function selectDefaults(appTargetsStr) {
         var appTargets = appTargetsStr.split(" ");
-	var sdk = selectDefaultSDK();
+	var sdk = androidVersionToSDK(getAndroidVersion());
 	var arch = selectDefaultArch(sdk);
 
 	for (var i = 0, len = appTargets.length; i < len; i++) {
@@ -51,12 +51,11 @@ function selectDefaultArch(sdk) {
         return false;
 }
 
-function selectDefaultSDK() {
-	var sdk = androidVersionToSDK(getAndroidVersion());
-	if (!sdk)
-		return false;
-	return 'sdk_21';
-}
+function getAndroidVersion() {
+	var ua = navigator.userAgent.toLowerCase();
+	var match = ua.match(/android\s([0-9\.]*)/);
+	return match ? match[1] : false;
+};
 
 function androidVersionToSDK(av) {
         if (!av)
@@ -81,27 +80,18 @@ function androidVersionToSDK(av) {
             }
             return 15+minor;
           case 5:
-            return 21+minor;
+            // SDK21 is not supported since v96
+            return false;
           case 6:
             return 23;
           case 7:
             return 24+minor;
           case 8:
             return 26+minor;
-          case 9:
-          default:
-            return 28;
         }
 
-        // will never get here
-        return false;
+        return 28+major-9;
 }
-
-function getAndroidVersion() {
-	var ua = navigator.userAgent.toLowerCase();
-	var match = ua.match(/android\s([0-9\.]*)/);
-	return match ? match[1] : false;
-};
 
 function radioClick(appTarget, obj) {
 	if (appTarget == 'SystemWebView') {
@@ -131,7 +121,7 @@ function doDownload(appName, appTarget, apkPrefix) {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
 				switch (objs[i].value) {
-					case '21':
+					case '23':
 						target = 'ChromePublic';
 					break;
 					default:
