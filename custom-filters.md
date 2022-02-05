@@ -25,7 +25,7 @@ ruleset_converter --input_format=filter-list \
 		--output_file=filters.dat
 ```
 
-A pre-built `ruleset_converter` binary for Linux/amd64 (but not updated regularly) is available [here](https://github.com/bromite/filters/releases/).
+A pre-built `ruleset_converter` binary for Linux/amd64 is available with each [Bromite Release](https://github.com/bromite/bromite/releases/).
 
 # Requirements
 
