@@ -46,7 +46,7 @@ try {
             }, function() { console.error('failed'); })
         }
         setTimeout(function() {
-            if (rtcConn.localDescription.sdp) {
+            if (rtcConn.localDescription) {
               rtcConn.localDescription.sdp.split("\n").forEach(function(e) {
                 0 === e.indexOf("a=candidate:") && parseCandidate(e)
               })
