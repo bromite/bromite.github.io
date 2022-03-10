@@ -13,6 +13,8 @@ This page helps identifying if common fingerprinting techniques are effective wi
 <progress id="progress" max="100"></progress>
 <a id="downloadButton" href="#" style="visibility: hidden">Download this data as JSON</a>
 
+NOTE: this is not a score. Hit refresh to re-calculate fingerprints and verify that they have changed.
+
 # General
 
 Navigator platform is: <span class="info" id="navigatorPlatform"></span>
