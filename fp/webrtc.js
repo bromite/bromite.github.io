@@ -46,9 +46,11 @@ try {
             }, function() { console.error('failed'); })
         }
         setTimeout(function() {
-            rtcConn.localDescription.sdp.split("\n").forEach(function(e) {
+            if (rtcConn.localDescription.sdp) {
+              rtcConn.localDescription.sdp.split("\n").forEach(function(e) {
                 0 === e.indexOf("a=candidate:") && parseCandidate(e)
-            })
+              })
+            }
         }, 1e3)
 }
 
