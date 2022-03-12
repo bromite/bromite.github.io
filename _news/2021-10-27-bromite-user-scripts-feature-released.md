@@ -12,6 +12,3 @@ Please report any bugs via the [issue tracker on GitHub](https://github.com/brom
 ## User scripts
 
 [Read more information on the wiki](https://github.com/bromite/bromite/wiki/UserScripts) and then head on to https://greasyfork.org/ to try out the new feature.
-
----
-[&rarr; Discuss on Hacker News](https://news.ycombinator.com/item?id=29017168)
