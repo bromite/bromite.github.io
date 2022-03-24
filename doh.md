@@ -9,9 +9,9 @@ image: /bromite.png
 
 Since [release 67.0.3396.88](https://github.com/bromite/bromite/releases/tag/67.0.3396.88) it is possible to enable [DNS-over-HTTPS](https://en.wikipedia.org/wiki/DNS_over_HTTPS).
 
-This feature is disabled by default.
+This feature is enabled by default in opportunistic mode (same as upstream Chromium).
 
-Enable DoH from Settings -> Privacy -> Secure DNS and then enter one or more space-separated DoH template URLs.
+Enable DoH from Settings -> Privacy -> Use Secure DNS -> Choose another provider and then enter one or more space-separated DoH template URLs.
 
 If the URL contains `{dns}` then GET requests will be issued (otherwise the default are POST requests).
 
