@@ -78,19 +78,19 @@ function androidVersionToSDK(av) {
               // SDK17 and SDK18 are not supported since v75.0.3770.53+
               return false;
             }
-            return 15+minor;
+            return false;
           case 5:
             // SDK21 is not supported since v96
             return false;
           case 6:
             return 23;
           case 7:
-            return 24+minor;
+            return 23;
           case 8:
-            return 26+minor;
+            return 23;
         }
 
-        return 28+major-9;
+        return 23;
 }
 
 function radioClick(appTarget, obj) {
