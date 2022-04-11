@@ -1,54 +1,38 @@
 <script type="text/javascript">
 
-var defaultSDK = "sdk_23", defaultArch = "arm";
+// SDK to select when architecture is changed
+const defaultSDK = 23;
 
 function selectDefaults(appTargetsStr) {
+	var sdk = defaultSDK;
+	var arch = 'arm';
+
         var appTargets = appTargetsStr.split(" ");
-	var sdk = androidVersionToSDK(getAndroidVersion());
-	var arch = selectDefaultArch(sdk);
+        var androidVersion = getAndroidVersion();
+        if (androidVersion)
+            sdk = androidVersionToSDK(androidVersion, sdk);
+        if (sdk && navigator.platform)
+            arch = selectDefaultArch(navigator.platform, arch);
 
 	for (var i = 0, len = appTargets.length; i < len; i++) {
 		var appTarget = appTargets[i];
-		if (arch) {
-			var input = document.getElementById(appTarget + '_' + arch);
-			input.checked = true;
-			if (appTargetsStr.includes("chromium")) {
-				input.parentNode.parentNode.classList.add("chromium-halo");
-			} else {
-				input.parentNode.parentNode.classList.add("bromite-halo");
-			}
+
+		var input = document.getElementById(appTarget + '_arch_' + arch);
+		input.checked = true;
+		if (appTargetsStr.includes("chromium")) {
+			input.parentNode.parentNode.classList.add("chromium-halo");
+		} else {
+			input.parentNode.parentNode.classList.add("bromite-halo");
 		}
-		if (sdk) {
-			var input = document.getElementById(appTarget + '_' + sdk);
-			input.checked = true;
-			if (appTargetsStr.includes("chromium")) {
-				input.parentNode.parentNode.classList.add("chromium-halo");
-			} else {
-				input.parentNode.parentNode.classList.add("bromite-halo");
-			}
+
+		var input = document.getElementById(appTarget + '_sdk_' + sdk);
+		input.checked = true;
+		if (appTargetsStr.includes("chromium")) {
+			input.parentNode.parentNode.classList.add("chromium-halo");
+		} else {
+			input.parentNode.parentNode.classList.add("bromite-halo");
 		}
 	}
-
-	if (sdk)
-		defaultSDK = sdk;
-	if (arch)
-		defaultArch = arch;
-}
-
-function selectDefaultArch(sdk) {
-	if (!navigator.platform || !sdk)
-		return false;
-        if (navigator.platform.includes("aarch64"))
-		return "arch_arm64";
-        if (navigator.platform.includes("armv8"))
-		return "arch_arm64";
-        if (navigator.platform.includes("arm"))
-		return "arch_arm";
-        if (navigator.platform.includes("i686"))
-		return "arch_x86";
-        if (navigator.platform.includes("x86_64"))
-		return "arch_x64";
-        return false;
 }
 
 function getAndroidVersion() {
@@ -57,40 +41,57 @@ function getAndroidVersion() {
 	return match ? match[1] : false;
 };
 
-function androidVersionToSDK(av) {
+
+function selectDefaultArch(platform, defaultArch) {
+        if (platform.includes("aarch64"))
+		return "arm64";
+        if (platform.includes("armv8"))
+		return "arm64";
+        if (platform.includes("arm"))
+		return "arm";
+        if (platform.includes("i686"))
+		return "x86";
+        if (platform.includes("x86_64"))
+		return "x64";
+        // unrecognized
+        return defaultArch;
+}
+
+function androidVersionToSDK(av, default) {
         if (!av)
-          return false;
+          return default;
         var parts = av.split('.');
         if (parts.length == 1)
           parts.push('0');
 
         var major = parseInt(parts[0]), minor = parseInt(parts[1]);
         if (major < 4)
-            return false;
+            return default;
         var patch = 0;
         if (parts.length > 2)
           patch = parseInt(parts[2]);
         
+        var sdk = default;
         switch (major) {
           case 4:
             if (minor < 4) {
               // SDK16 and below are not supported since v74
               // SDK17 and SDK18 are not supported since v75.0.3770.53+
-              return false;
+              return default;
             }
-            return false;
+            return default;
           case 5:
             // SDK21 is not supported since v96
-            return false;
+            return default;
           case 6:
-            return 23;
+            sdk = 23;
           case 7:
-            return 23;
+            sdk = 23;
           case 8:
-            return 23;
+            sdk = 23;
         }
 
-        return 23;
+        return sdk;
 }
 
 function radioClick(appTarget, obj) {
@@ -99,7 +100,7 @@ function radioClick(appTarget, obj) {
 	}
 	if (obj.name == appTarget + '_arch') {
 		if (obj.value == 'arm64') {
-			document.getElementById(appTarget + '_' + defaultSDK).checked = true;
+			document.getElementById(appTarget + '_sdk_' + defaultSDK).checked = true;
 		}
 	}
 }
