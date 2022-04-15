@@ -57,32 +57,32 @@ function selectDefaultArch(platform, defaultArch) {
         return defaultArch;
 }
 
-function androidVersionToSDK(av, default) {
+function androidVersionToSDK(av, defsdk) {
         if (!av)
-          return default;
+          return defsdk;
         var parts = av.split('.');
         if (parts.length == 1)
           parts.push('0');
 
         var major = parseInt(parts[0]), minor = parseInt(parts[1]);
         if (major < 4)
-            return default;
+            return defsdk;
         var patch = 0;
         if (parts.length > 2)
           patch = parseInt(parts[2]);
         
-        var sdk = default;
+        var sdk = defsdk;
         switch (major) {
           case 4:
             if (minor < 4) {
               // SDK16 and below are not supported since v74
               // SDK17 and SDK18 are not supported since v75.0.3770.53+
-              return default;
+              return defsdk;
             }
-            return default;
+            return defsdk;
           case 5:
             // SDK21 is not supported since v96
-            return default;
+            return defsdk;
           case 6:
             sdk = 23;
           case 7:
