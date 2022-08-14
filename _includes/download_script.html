@@ -127,13 +127,13 @@ function doDownload(appName, appTarget, apkPrefix) {
 	} else {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
-				switch (objs[i].value) {
+				switch (parseInt(objs[i].value)) {
 					case defaultSDK:
 						target = 'ChromePublic';
 					break;
 					default:
 						console.error("unknown SDK:", objs[i].value);
-					break;
+						return;
 				}
 				break;
 			}
