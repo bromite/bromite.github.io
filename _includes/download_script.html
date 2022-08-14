@@ -2,6 +2,7 @@
 
 // SDK to select when architecture is changed
 const defaultSDK = 23;
+const systemWebViewDefaultSDK = 24;
 
 function selectDefaults(appTargetsStr) {
 	var sdk = defaultSDK;
@@ -25,7 +26,12 @@ function selectDefaults(appTargetsStr) {
 			input.parentNode.parentNode.classList.add("bromite-halo");
 		}
 
-		var input = document.getElementById(appTarget + '_sdk_' + sdk);
+		var sdkToUse = sdk;
+		// override for SystemWebView
+		if (appTarget == 'systemwebview')
+			sdkToUse = systemWebViewDefaultSDK;
+
+		var input = document.getElementById(appTarget + '_sdk_' + sdkToUse);
 		input.checked = true;
 		if (appTargetsStr.includes("chromium")) {
 			input.parentNode.parentNode.classList.add("chromium-halo");
@@ -84,11 +90,11 @@ function androidVersionToSDK(av, defaultVersion) {
             // SDK21 is not supported since v96
             return defaultVersion;
           case 6:
-            sdk = 23;
+            sdk = defaultSDK;
           case 7:
-            sdk = 23;
+            sdk = defaultSDK;
           case 8:
-            sdk = 23;
+            sdk = defaultSDK;
         }
 
         return sdk;
@@ -122,7 +128,7 @@ function doDownload(appName, appTarget, apkPrefix) {
 		for (var i = 0; i < objs.length; i++) {
 			if (objs[i].checked) {
 				switch (objs[i].value) {
-					case '23':
+					case defaultSDK:
 						target = 'ChromePublic';
 					break;
 					default:

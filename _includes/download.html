@@ -7,7 +7,11 @@ Current {{ include.app_name }} stable version: <strong>{{ site.latest_release }}
 
 |Architecture	|Android version	|
 |:---		|:---		|
-|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_23"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_23" value="23" {% if app_target == 'systemwebview' %}disabled="disabled"{% endif %} checked="checked" />Marshmallow 6.0 and above (SDK23)</label>	|
+{% if app_target == 'systemwebview' -%}
+|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_24"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_24" value="24" disabled="disabled" checked="checked" />Nougat 7.0 and above (SDK24)</label>	|
+{% else -%}
+|<label for="{{ app_target }}_arch_arm"><input onclick="radioClick('{{ app_target }}', this)" value="arm" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm" checked />ARM</label>		|<label for="{{ app_target }}_sdk_23"><input onclick="radioClick('{{ app_target }}', this)"  type="radio" name="{{ app_target }}_sdk" id="{{ app_target }}_sdk_23" value="23" checked="checked" />Marshmallow 6.0 and above (SDK23)</label>	|
+{% endif -%}
 |<label for="{{ app_target }}_arch_arm64"><input onclick="radioClick('{{ app_target }}', this)" value="arm64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_arm64"/>ARM64</label>		| |
 |<label for="{{ app_target }}_arch_x86"><input onclick="radioClick('{{ app_target }}', this)" value="x86" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x86"/>X86</label>		| |
 |<label for="{{ app_target }}_arch_x64"><input onclick="radioClick('{{ app_target }}', this)" value="x64" type="radio" name="{{ app_target }}_arch" id="{{ app_target }}_arch_x64"/>X64</label>		| |
