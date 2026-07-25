@@ -16,7 +16,6 @@ Some aspects of interacting with the Bromite Project will involve the collection
 * browsing the Bromite Official Website, which is hosted on GitHub Pages
 * the automatic updates of subresource filters used for the AdBlocking functionality, enabled by default, which downloads a file hosted on GitHub Pages
 * the automatic check and update of Bromite itself, enabled by default, which checks for headers on a a file hosted on GitHub Project Releases and allows to download it
-* using the Bromite Official F-Droid repository
 
 The following subsections describe the information collected.
 
@@ -28,7 +27,3 @@ GitHub does not share any of the collected information with Bromite Project memb
 ## Bromite Project Releases
 
 All releases are provided via the [official GitHub Project](https://github.com/bromite/bromite/releases); please refer to [GitHub Privacy Statement](https://docs.github.com/en/github/site-policy/github-privacy-statement) for the policy information.
-
-## Bromite Official F-Droid Repository
-
-The Bromite F-Droid official repository (https://fdroid.bromite.org/) does not collect any IP address or user agent information of visitors.
